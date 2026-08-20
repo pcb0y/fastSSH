@@ -1,6 +1,6 @@
 # FastSSH
 
-A free, native macOS SSH client with built-in SFTP file manager and AI Agent.
+A free, cross-platform SSH client with built-in SFTP file manager and AI Agent. Available for macOS and Windows.
 
 ---
 
@@ -22,14 +22,16 @@ So I built FastSSH: a fully native, completely free SSH tool that just works.
 - **Server Monitor** — Real-time CPU, memory, and disk usage monitoring
 - **AI Agent** — Autonomous AI assistant that executes commands, reads output, and iterates until the task is complete. Supports OpenAI, Anthropic, DeepSeek, Qwen (通义千问), Ollama, and any OpenAI-compatible API
 - **Config Import/Export** — Export and import all settings (connections + AI config) as a single JSON file
-- **Native macOS App** — Pure Swift + SwiftUI, lightweight and fast
+- **Cross-Platform** — macOS (Swift + SwiftUI) and Windows (Go + Wails + WebView2)
 - **12 Languages** — English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Português, Русский, العربية, हिन्दी
 
 ---
 
 ## Install
 
-### Option 1: Download DMG (Recommended)
+### macOS
+
+**Download DMG (Recommended)**
 
 1. Download `FastSSH.dmg` from [Releases](https://github.com/pcb0y/fastSSH/releases)
 2. Open the DMG file
@@ -38,21 +40,32 @@ So I built FastSSH: a fully native, completely free SSH tool that just works.
 
 > Note: On first launch, macOS may show a security warning. Go to **System Settings → Privacy & Security** and click "Open Anyway".
 
-### Option 2: Build from Source
-
-Requirements: macOS 14+, Xcode Command Line Tools, libssh2
+**Build from Source**
 
 ```bash
-# Install dependencies
 brew install libssh2 openssl
-
-# Clone and build
 git clone https://github.com/pcb0y/fastSSH.git
 cd fastSSH
 swift build -c release
-
-# Launch
 swift run
+```
+
+### Windows
+
+**Download EXE (Recommended)**
+
+1. Download `FastSSH-Windows.exe` from [Releases](https://github.com/pcb0y/fastSSH/releases)
+2. Double-click to run — no installation needed
+3. Requires Windows 10/11 (WebView2 runtime pre-installed)
+
+**Build from Source**
+
+```bash
+# Requires Go 1.21+ and Wails CLI
+go install github.com/wailsapp/wails/v2/cmd/wails@latest
+git clone https://github.com/pcb0y/fastSSH.git
+cd fastSSH/fastssh-windows
+wails build -platform windows/amd64
 ```
 
 ---
@@ -86,7 +99,7 @@ MIT — Free to use, free to modify, free forever.
 
 # FastSSH
 
-一款免费的 macOS 原生 SSH 客户端，内置 SFTP 文件管理器和 AI 智能助手。
+一款免费的跨平台 SSH 客户端，内置 SFTP 文件管理器和 AI 智能助手。支持 macOS 和 Windows。
 
 ---
 
@@ -108,14 +121,16 @@ MIT — Free to use, free to modify, free forever.
 - **服务器监控** — 实时显示 CPU、内存、磁盘使用率
 - **AI 智能助手** — 自主执行命令、读取输出、持续推理直到完成任务。支持 OpenAI、Anthropic、DeepSeek、通义千问、Ollama 以及任何 OpenAI 兼容接口
 - **配置导入导出** — 将所有设置（连接 + AI 配置）导出为单个 JSON 文件
-- **原生 macOS 应用** — 纯 Swift + SwiftUI 开发，轻量快速
+- **跨平台** — macOS（Swift + SwiftUI）和 Windows（Go + Wails + WebView2）
 - **12 种语言** — 中文、英文、日文、韩文、西班牙文、法文、德文、葡萄牙文、俄文、阿拉伯文、印地文
 
 ---
 
 ## 安装
 
-### 方式一：下载 DMG 安装包（推荐）
+### macOS
+
+**下载 DMG 安装包（推荐）**
 
 1. 从 [Releases](https://github.com/pcb0y/fastSSH/releases) 下载 `FastSSH.dmg`
 2. 双击打开 DMG 文件
@@ -124,21 +139,32 @@ MIT — Free to use, free to modify, free forever.
 
 > 注意：首次启动时 macOS 可能会弹出安全提示，请前往 **系统设置 → 隐私与安全性**，点击"仍要打开"。
 
-### 方式二：从源码编译
-
-环境要求：macOS 14+、Xcode 命令行工具、libssh2
+**从源码编译**
 
 ```bash
-# 安装依赖
 brew install libssh2 openssl
-
-# 克隆并编译
 git clone https://github.com/pcb0y/fastSSH.git
 cd fastSSH
 swift build -c release
-
-# 启动
 swift run
+```
+
+### Windows
+
+**下载 EXE（推荐）**
+
+1. 从 [Releases](https://github.com/pcb0y/fastSSH/releases) 下载 `FastSSH-Windows.exe`
+2. 双击运行，无需安装
+3. 需要 Windows 10/11（WebView2 运行时已预装）
+
+**从源码编译**
+
+```bash
+# 需要 Go 1.21+ 和 Wails CLI
+go install github.com/wailsapp/wails/v2/cmd/wails@latest
+git clone https://github.com/pcb0y/fastSSH.git
+cd fastSSH/fastssh-windows
+wails build -platform windows/amd64
 ```
 
 ---

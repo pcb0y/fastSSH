@@ -1,0 +1,13 @@
+{
+  "$schema": "https://wails.io/schemas/config.v2.json",
+  "name": "fastssh-windows",
+  "outputfilename": "fastssh-windows",
+  "frontend:install": "npm install",
+  "frontend:build": "npm run build",
+  "frontend:dev:watcher": "npm run dev",
+  "frontend:dev:serverUrl": "auto",
+  "author": {
+    "name": "宗肇猛",
+    "email": "10113017+pcb0y@user.noreply.gitee.com"
+  }
+}
