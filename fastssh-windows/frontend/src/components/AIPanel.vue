@@ -6,8 +6,37 @@ const props = defineProps(['sessionId'])
 const messages = ref([])
 const inputText = ref('')
 const isLoading = ref(false)
+const showSettings = ref(false)
 const messagesContainer = ref(null)
 const maxIterations = 15
+
+const aiConfig = ref({
+  provider: 'openai',
+  apiKey: '',
+  endpoint: '',
+  model: '',
+})
+
+const providers = [
+  { value: 'openai', label: 'OpenAI' },
+  { value: 'anthropic', label: 'Anthropic' },
+  { value: 'deepseek', label: 'DeepSeek' },
+  { value: 'qwen', label: 'Qwen (通义千问)' },
+  { value: 'ollama', label: 'Ollama' },
+  { value: 'custom', label: 'Custom' },
+]
+
+async function loadAIConfig() {
+  const cfg = await window.go.main.App.GetAIConfig()
+  if (cfg) aiConfig.value = cfg
+}
+
+async function saveAIConfig() {
+  await window.go.main.App.SaveAIConfig(aiConfig.value)
+  showSettings.value = false
+}
+
+loadAIConfig()
 
 async function sendMessage() {
   const text = inputText.value.trim()
@@ -94,6 +123,26 @@ function copyText(text) {
   <div class="ai-panel">
     <div class="ai-header">
       <span>✨ AI Agent</span>
+      <button class="settings-btn" @click="showSettings = !showSettings" title="Settings">⚙</button>
+    </div>
+
+    <!-- Settings Panel -->
+    <div v-if="showSettings" class="ai-settings">
+      <label>Provider
+        <select v-model="aiConfig.provider">
+          <option v-for="p in providers" :key="p.value" :value="p.value">{{ p.label }}</option>
+        </select>
+      </label>
+      <label v-if="aiConfig.provider !== 'ollama'">API Key
+        <input type="password" v-model="aiConfig.apiKey" placeholder="sk-..." />
+      </label>
+      <label>Endpoint
+        <input v-model="aiConfig.endpoint" placeholder="Leave empty for default" />
+      </label>
+      <label>Model
+        <input v-model="aiConfig.model" placeholder="Leave empty for default" />
+      </label>
+      <button class="save-btn" @click="saveAIConfig">Save</button>
     </div>
 
     <div class="ai-messages scrollbar" ref="messagesContainer">
@@ -147,6 +196,47 @@ function copyText(text) {
   font-weight: 600;
   border-bottom: 1px solid var(--border);
   color: var(--accent);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.settings-btn {
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 16px;
+  padding: 2px 6px;
+}
+
+.ai-settings {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background: var(--bg-tertiary);
+}
+
+.ai-settings label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+.ai-settings input, .ai-settings select {
+  font-size: 12px;
+  padding: 5px 8px;
+}
+
+.save-btn {
+  background: var(--accent);
+  color: var(--bg-primary);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 6px 12px;
+  align-self: flex-end;
 }
 
 .ai-messages {
