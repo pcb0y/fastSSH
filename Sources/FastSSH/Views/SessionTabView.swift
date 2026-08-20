@@ -10,6 +10,7 @@ struct SessionTabView: View {
             HStack(spacing: 0) {
                 tabButton("tab.terminal".localized, systemImage: "terminal", index: 0)
                 tabButton("tab.files".localized, systemImage: "folder", index: 1)
+                tabButton("tab.monitor".localized, systemImage: "gauge.with.dots.needle.33percent", index: 2)
                 Spacer()
                 if let error = session.error {
                     Text(error)
@@ -36,6 +37,8 @@ struct SessionTabView: View {
                 TerminalView(session: session)
             case 1:
                 FileBrowserView(session: session)
+            case 2:
+                ServerMonitorView(session: session)
             default:
                 EmptyView()
             }

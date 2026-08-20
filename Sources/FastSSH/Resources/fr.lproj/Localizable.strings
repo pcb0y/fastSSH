@@ -68,3 +68,14 @@
 "new.folder.message" = "Entrez le nom du dossier :";
 "new.folder.default" = "nouveau_dossier";
 "new.folder.failed" = "Échec de la création du dossier : %@";
+
+/* Import/Export */
+"export" = "Exporter";
+"import" = "Importer";
+"export.title" = "Exporter les connexions";
+"import.title" = "Importer les connexions";
+"export.connections" = "Exporter les connexions...";
+"import.connections" = "Importer les connexions...";
+"import.result" = "%d sur %d connexion(s) importée(s)";
+
+"tab.monitor" = "Moniteur";

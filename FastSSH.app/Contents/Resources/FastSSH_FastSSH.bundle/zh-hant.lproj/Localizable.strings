@@ -68,3 +68,14 @@
 "new.folder.message" = "請輸入資料夾名稱：";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "建立資料夾失敗：%@";
+
+/* Import/Export */
+"export" = "匯出";
+"import" = "匯入";
+"export.title" = "匯出連線設定";
+"import.title" = "匯入連線設定";
+"export.connections" = "匯出連線設定...";
+"import.connections" = "匯入連線設定...";
+"import.result" = "已匯入 %d / %d 個連線";
+
+"tab.monitor" = "監控";

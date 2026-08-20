@@ -68,3 +68,14 @@
 "new.folder.message" = "Введите имя папки:";
 "new.folder.default" = "новая_папка";
 "new.folder.failed" = "Ошибка создания папки: %@";
+
+/* Import/Export */
+"export" = "Экспорт";
+"import" = "Импорт";
+"export.title" = "Экспорт подключений";
+"import.title" = "Импорт подключений";
+"export.connections" = "Экспорт подключений...";
+"import.connections" = "Импорт подключений...";
+"import.result" = "Импортировано %d из %d подключений";
+
+"tab.monitor" = "Монитор";

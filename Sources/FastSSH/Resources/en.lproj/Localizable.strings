@@ -68,3 +68,14 @@
 "new.folder.message" = "Enter folder name:";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "Create folder failed: %@";
+
+/* Import/Export */
+"export" = "Export";
+"import" = "Import";
+"export.title" = "Export Connections";
+"import.title" = "Import Connections";
+"export.connections" = "Export Connections...";
+"import.connections" = "Import Connections...";
+"import.result" = "Imported %d of %d connection(s)";
+
+"tab.monitor" = "Monitor";

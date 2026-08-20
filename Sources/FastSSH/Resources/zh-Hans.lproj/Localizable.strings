@@ -68,3 +68,14 @@
 "new.folder.message" = "请输入文件夹名称：";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "创建文件夹失败：%@";
+
+/* Import/Export */
+"export" = "导出";
+"import" = "导入";
+"export.title" = "导出连接配置";
+"import.title" = "导入连接配置";
+"export.connections" = "导出连接配置...";
+"import.connections" = "导入连接配置...";
+"import.result" = "已导入 %d / %d 个连接";
+
+"tab.monitor" = "监控";

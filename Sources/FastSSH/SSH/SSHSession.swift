@@ -568,6 +568,67 @@ class SSHSession: ObservableObject, Identifiable {
             }
         }
     }
+
+    /// Execute a command on a new channel and return its output
+    nonisolated func executeCommand(_ command: String) async -> String {
+        guard let rawSession = cSession else { return "" }
+        let sp = SendablePointer(pointer: rawSession)
+        let lock = sessionLock
+
+        return await withCheckedContinuation { continuation in
+            DispatchQueue.global().async {
+                lock.lock()
+                let session = sp.pointer
+                libssh2_session_set_blocking(session, 1)
+
+                // Open a new exec channel
+                let channelType = "session"
+                guard let channel = libssh2_channel_open_ex(
+                    session, channelType, UInt32(channelType.count),
+                    2 * 1024 * 1024, 32768, nil, 0
+                ) else {
+                    libssh2_session_set_blocking(session, 0)
+                    lock.unlock()
+                    continuation.resume(returning: "")
+                    return
+                }
+
+                let execType = "exec"
+                let rc = libssh2_channel_process_startup(
+                    channel, execType, UInt32(execType.count),
+                    command, UInt32(command.count)
+                )
+                guard rc == 0 else {
+                    libssh2_channel_close(channel)
+                    libssh2_channel_free(channel)
+                    libssh2_session_set_blocking(session, 0)
+                    lock.unlock()
+                    continuation.resume(returning: "")
+                    return
+                }
+
+                // Read all output
+                var output = Data()
+                var buffer = [Int8](repeating: 0, count: 8192)
+                while true {
+                    let bytesRead = libssh2_channel_read_ex(channel, 0, &buffer, 8192)
+                    if bytesRead > 0 {
+                        output.append(Data(bytes: buffer, count: Int(bytesRead)))
+                    } else {
+                        break
+                    }
+                }
+
+                libssh2_channel_close(channel)
+                libssh2_channel_free(channel)
+                libssh2_session_set_blocking(session, 0)
+                lock.unlock()
+
+                let result = String(data: output, encoding: .utf8) ?? ""
+                continuation.resume(returning: result)
+            }
+        }
+    }
 }
 
 enum SSHSessionError: Error, LocalizedError {

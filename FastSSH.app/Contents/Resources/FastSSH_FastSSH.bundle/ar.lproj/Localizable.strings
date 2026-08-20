@@ -68,3 +68,14 @@
 "new.folder.message" = "أدخل اسم المجلد:";
 "new.folder.default" = "مجلد_جديد";
 "new.folder.failed" = "فشل إنشاء المجلد: %@";
+
+/* Import/Export */
+"export" = "تصدير";
+"import" = "استيراد";
+"export.title" = "تصدير الاتصالات";
+"import.title" = "استيراد الاتصالات";
+"export.connections" = "تصدير الاتصالات...";
+"import.connections" = "استيراد الاتصالات...";
+"import.result" = "تم استيراد %d من %d اتصال(ات)";
+
+"tab.monitor" = "مراقب";

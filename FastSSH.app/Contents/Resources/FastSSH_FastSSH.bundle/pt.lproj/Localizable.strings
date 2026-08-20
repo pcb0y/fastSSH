@@ -68,3 +68,14 @@
 "new.folder.message" = "Digite o nome da pasta:";
 "new.folder.default" = "nova_pasta";
 "new.folder.failed" = "Falha ao criar pasta: %@";
+
+/* Import/Export */
+"export" = "Exportar";
+"import" = "Importar";
+"export.title" = "Exportar conexões";
+"import.title" = "Importar conexões";
+"export.connections" = "Exportar conexões...";
+"import.connections" = "Importar conexões...";
+"import.result" = "%d de %d conexão(ões) importada(s)";
+
+"tab.monitor" = "Monitor";

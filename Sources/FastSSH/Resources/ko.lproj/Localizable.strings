@@ -68,3 +68,14 @@
 "new.folder.message" = "폴더 이름을 입력하세요:";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "폴더 생성 실패: %@";
+
+/* Import/Export */
+"export" = "내보내기";
+"import" = "가져오기";
+"export.title" = "연결 설정 내보내기";
+"import.title" = "연결 설정 가져오기";
+"export.connections" = "연결 설정 내보내기...";
+"import.connections" = "연결 설정 가져오기...";
+"import.result" = "%2$d개 중 %1$d개 연결 가져옴";
+
+"tab.monitor" = "모니터";

@@ -92,19 +92,61 @@ struct TerminalNSView: NSViewRepresentable {
 class TerminalTextView: NSTextView {
     var session: SSHSession?
 
+    // Autocomplete state
+    let completer = CommandCompleter()
+    private var inputBuffer = ""
+    private var suggestions: [String] = []
+    private var selectedSuggestion = 0
+    private var popupWindow: NSWindow?
+    private var popupTableView: NSTableView?
+
     override func keyDown(with event: NSEvent) {
         guard let session = session else { return }
+
+        // If popup is showing, handle navigation keys
+        if popupWindow?.isVisible == true {
+            switch event.keyCode {
+            case 125: // Down arrow
+                selectedSuggestion = min(selectedSuggestion + 1, suggestions.count - 1)
+                popupTableView?.selectRowIndexes(IndexSet(integer: selectedSuggestion), byExtendingSelection: false)
+                popupTableView?.scrollRowToVisible(selectedSuggestion)
+                return
+            case 126: // Up arrow
+                selectedSuggestion = max(selectedSuggestion - 1, 0)
+                popupTableView?.selectRowIndexes(IndexSet(integer: selectedSuggestion), byExtendingSelection: false)
+                popupTableView?.scrollRowToVisible(selectedSuggestion)
+                return
+            case 36, 48: // Return or Tab — accept suggestion
+                acceptSuggestion()
+                return
+            case 53: // Escape — dismiss
+                dismissPopup()
+                return
+            default:
+                break
+            }
+        }
 
         // Handle special keys
         if let characters = event.charactersIgnoringModifiers {
             switch event.keyCode {
             case 36: // Return
+                // Record command to history before sending
+                completer.addToHistory(inputBuffer)
+                inputBuffer = ""
+                dismissPopup()
                 session.send("\r")
                 return
             case 51: // Backspace
+                if !inputBuffer.isEmpty {
+                    inputBuffer.removeLast()
+                }
                 session.send("\u{7f}")
+                updateSuggestions()
                 return
             case 53: // Escape
+                inputBuffer = ""
+                dismissPopup()
                 session.send("\u{1b}")
                 return
             case 48: // Tab
@@ -112,9 +154,11 @@ class TerminalTextView: NSTextView {
                 return
             case 123: // Left arrow
                 session.send("\u{1b}[D")
+                dismissPopup()
                 return
             case 124: // Right arrow
                 session.send("\u{1b}[C")
+                dismissPopup()
                 return
             case 125: // Down arrow
                 session.send("\u{1b}[B")
@@ -131,6 +175,8 @@ class TerminalTextView: NSTextView {
                 if let char = characters.first, char.isLetter {
                     let ctrlChar = Character(UnicodeScalar(char.asciiValue! - 96))
                     session.send(String(ctrlChar))
+                    inputBuffer = ""
+                    dismissPopup()
                     return
                 }
             }
@@ -138,6 +184,8 @@ class TerminalTextView: NSTextView {
             // Regular character input
             if let chars = event.characters, !chars.isEmpty {
                 session.send(chars)
+                inputBuffer += chars
+                updateSuggestions()
                 return
             }
         }
@@ -147,6 +195,8 @@ class TerminalTextView: NSTextView {
         // Intercept paste and typed text
         if let str = string as? String {
             session?.send(str)
+            inputBuffer += str
+            updateSuggestions()
         }
     }
 
@@ -154,13 +204,13 @@ class TerminalTextView: NSTextView {
         // Allow Cmd+C for copy, Cmd+V for paste
         if event.modifierFlags.contains(.command) {
             if event.charactersIgnoringModifiers == "c" {
-                // Copy selection
                 return super.performKeyEquivalent(with: event)
             }
             if event.charactersIgnoringModifiers == "v" {
-                // Paste from clipboard
                 if let content = NSPasteboard.general.string(forType: .string) {
                     session?.send(content)
+                    inputBuffer += content
+                    updateSuggestions()
                 }
                 return true
             }
@@ -173,7 +223,6 @@ class TerminalTextView: NSTextView {
 
     override func viewDidMoveToWindow() {
         super.viewDidMoveToWindow()
-        // Automatically grab focus when added to window
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) { [weak self] in
             guard let self = self else { return }
             self.window?.makeFirstResponder(self)
@@ -182,7 +231,144 @@ class TerminalTextView: NSTextView {
 
     override func mouseDown(with event: NSEvent) {
         super.mouseDown(with: event)
-        // Grab focus on click
         window?.makeFirstResponder(self)
+        dismissPopup()
+    }
+
+    // MARK: - Autocomplete
+
+    private func updateSuggestions() {
+        // Only suggest when input looks like a command (no spaces = first word)
+        let trimmed = inputBuffer.trimmingCharacters(in: .whitespaces)
+        guard !trimmed.contains(" "), trimmed.count >= 2 else {
+            dismissPopup()
+            return
+        }
+
+        suggestions = completer.suggest(for: trimmed)
+        if suggestions.isEmpty {
+            dismissPopup()
+            return
+        }
+
+        selectedSuggestion = 0
+        showPopup()
+    }
+
+    private func acceptSuggestion() {
+        guard !suggestions.isEmpty, selectedSuggestion < suggestions.count else { return }
+        let chosen = suggestions[selectedSuggestion]
+        // Send the remaining characters to complete the command
+        let remaining = String(chosen.dropFirst(inputBuffer.trimmingCharacters(in: .whitespaces).count))
+        session?.send(remaining)
+        inputBuffer = chosen
+        dismissPopup()
+    }
+
+    private func showPopup() {
+        guard let window = self.window else { return }
+
+        if popupWindow == nil {
+            createPopupWindow()
+        }
+
+        guard let popup = popupWindow, let tableView = popupTableView else { return }
+
+        // Position popup near cursor
+        let cursorRect = firstRect(forCharacterRange: selectedRange(), actualRange: nil)
+        let screenPoint = NSPoint(x: cursorRect.origin.x, y: cursorRect.origin.y - 4)
+
+        let rowHeight: CGFloat = 22
+        let popupHeight = min(CGFloat(suggestions.count) * rowHeight + 4, 180)
+        let popupWidth: CGFloat = 220
+
+        popup.setFrame(NSRect(x: screenPoint.x, y: screenPoint.y - popupHeight, width: popupWidth, height: popupHeight), display: true)
+
+        tableView.reloadData()
+        tableView.selectRowIndexes(IndexSet(integer: 0), byExtendingSelection: false)
+
+        if !popup.isVisible {
+            window.addChildWindow(popup, ordered: .above)
+            popup.orderFront(nil)
+        }
+    }
+
+    private func dismissPopup() {
+        suggestions = []
+        if let popup = popupWindow, popup.isVisible {
+            popup.parent?.removeChildWindow(popup)
+            popup.orderOut(nil)
+        }
+    }
+
+    private func createPopupWindow() {
+        let popup = NSPanel(
+            contentRect: NSRect(x: 0, y: 0, width: 220, height: 150),
+            styleMask: [.nonactivatingPanel, .fullSizeContentView],
+            backing: .buffered,
+            defer: true
+        )
+        popup.isFloatingPanel = true
+        popup.level = .floating
+        popup.hasShadow = true
+        popup.backgroundColor = NSColor(red: 0.12, green: 0.12, blue: 0.18, alpha: 0.95)
+        popup.isOpaque = false
+
+        let scrollView = NSScrollView(frame: popup.contentView!.bounds)
+        scrollView.autoresizingMask = [.width, .height]
+        scrollView.hasVerticalScroller = true
+        scrollView.borderType = .noBorder
+        scrollView.drawsBackground = false
+
+        let tableView = NSTableView()
+        tableView.backgroundColor = .clear
+        tableView.headerView = nil
+        tableView.rowHeight = 22
+        tableView.intercellSpacing = NSSize(width: 0, height: 2)
+        tableView.selectionHighlightStyle = .regular
+        tableView.delegate = self
+        tableView.dataSource = self
+
+        let column = NSTableColumn(identifier: NSUserInterfaceItemIdentifier("command"))
+        column.width = 210
+        tableView.addTableColumn(column)
+
+        scrollView.documentView = tableView
+        popup.contentView?.addSubview(scrollView)
+
+        popupWindow = popup
+        popupTableView = tableView
+    }
+}
+
+// MARK: - NSTableViewDataSource & Delegate
+
+extension TerminalTextView: NSTableViewDataSource, NSTableViewDelegate {
+    func numberOfRows(in tableView: NSTableView) -> Int {
+        suggestions.count
+    }
+
+    func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
+        let cell = NSTextField(labelWithString: suggestions[row])
+        cell.font = NSFont.monospacedSystemFont(ofSize: 12, weight: .regular)
+        cell.textColor = NSColor(red: 0.804, green: 0.839, blue: 0.957, alpha: 1.0)
+        cell.drawsBackground = false
+        cell.isBezeled = false
+        cell.isEditable = false
+
+        let container = NSView()
+        cell.translatesAutoresizingMaskIntoConstraints = false
+        container.addSubview(cell)
+        NSLayoutConstraint.activate([
+            cell.leadingAnchor.constraint(equalTo: container.leadingAnchor, constant: 8),
+            cell.centerYAnchor.constraint(equalTo: container.centerYAnchor),
+        ])
+        return container
+    }
+
+    func tableViewSelectionDidChange(_ notification: Notification) {
+        if let tableView = notification.object as? NSTableView {
+            selectedSuggestion = tableView.selectedRow
+        }
     }
 }

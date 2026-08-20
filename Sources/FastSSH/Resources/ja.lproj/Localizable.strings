@@ -68,3 +68,14 @@
 "new.folder.message" = "フォルダ名を入力:";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "フォルダの作成に失敗: %@";
+
+/* Import/Export */
+"export" = "エクスポート";
+"import" = "インポート";
+"export.title" = "接続設定をエクスポート";
+"import.title" = "接続設定をインポート";
+"export.connections" = "接続設定をエクスポート...";
+"import.connections" = "接続設定をインポート...";
+"import.result" = "%2$d 件中 %1$d 件インポート";
+
+"tab.monitor" = "モニター";

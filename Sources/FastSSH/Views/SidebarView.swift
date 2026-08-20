@@ -60,12 +60,37 @@ struct SidebarView: View {
         .listStyle(.sidebar)
         .toolbar {
             ToolbarItem {
-                Button {
-                    appState.editingConnection = nil
-                    appState.showConnectionDialog = true
+                Menu {
+                    Button {
+                        appState.editingConnection = nil
+                        appState.showConnectionDialog = true
+                    } label: {
+                        Label("new.connection".localized, systemImage: "plus")
+                    }
+                    Divider()
+                    Button {
+                        appState.exportConnections()
+                    } label: {
+                        Label("export.connections".localized, systemImage: "square.and.arrow.up")
+                    }
+                    Button {
+                        appState.importConnections()
+                    } label: {
+                        Label("import.connections".localized, systemImage: "square.and.arrow.down")
+                    }
                 } label: {
                     Image(systemName: "plus")
                 }
+            }
+        }
+        .alert("import.result".localized, isPresented: Binding(
+            get: { appState.importResult != nil },
+            set: { if !$0 { appState.importResult = nil } }
+        )) {
+            Button("OK") { appState.importResult = nil }
+        } message: {
+            if let result = appState.importResult {
+                Text(result)
             }
         }
 

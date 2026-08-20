@@ -68,3 +68,14 @@
 "new.folder.message" = "Ordnername eingeben:";
 "new.folder.default" = "neuer_ordner";
 "new.folder.failed" = "Ordner erstellen fehlgeschlagen: %@";
+
+/* Import/Export */
+"export" = "Exportieren";
+"import" = "Importieren";
+"export.title" = "Verbindungen exportieren";
+"import.title" = "Verbindungen importieren";
+"export.connections" = "Verbindungen exportieren...";
+"import.connections" = "Verbindungen importieren...";
+"import.result" = "%d von %d Verbindung(en) importiert";
+
+"tab.monitor" = "Monitor";

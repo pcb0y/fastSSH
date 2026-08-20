@@ -68,3 +68,14 @@
 "new.folder.message" = "Introduzca el nombre de la carpeta:";
 "new.folder.default" = "nueva_carpeta";
 "new.folder.failed" = "Error al crear carpeta: %@";
+
+/* Import/Export */
+"export" = "Exportar";
+"import" = "Importar";
+"export.title" = "Exportar conexiones";
+"import.title" = "Importar conexiones";
+"export.connections" = "Exportar conexiones...";
+"import.connections" = "Importar conexiones...";
+"import.result" = "%d de %d conexión(es) importada(s)";
+
+"tab.monitor" = "Monitor";

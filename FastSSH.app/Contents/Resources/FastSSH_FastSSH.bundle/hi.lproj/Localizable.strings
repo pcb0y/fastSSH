@@ -68,3 +68,14 @@
 "new.folder.message" = "फ़ोल्डर का नाम दर्ज करें:";
 "new.folder.default" = "new_folder";
 "new.folder.failed" = "फ़ोल्डर बनाने में विफल: %@";
+
+/* Import/Export */
+"export" = "निर्यात";
+"import" = "आयात";
+"export.title" = "कनेक्शन निर्यात करें";
+"import.title" = "कनेक्शन आयात करें";
+"export.connections" = "कनेक्शन निर्यात करें...";
+"import.connections" = "कनेक्शन आयात करें...";
+"import.result" = "%2$d में से %1$d कनेक्शन आयात किए";
+
+"tab.monitor" = "मॉनिटर";

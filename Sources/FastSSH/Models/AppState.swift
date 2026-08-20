@@ -1,5 +1,6 @@
 import SwiftUI
-import Foundation
+import AppKit
+import UniformTypeIdentifiers
 
 @MainActor
 class AppState: ObservableObject {
@@ -62,4 +63,48 @@ class AppState: ObservableObject {
     var activeSession: SSHSession? {
         sessions.first { $0.id == activeSessionId }
     }
+
+    // MARK: - Import / Export
+
+    func exportConnections() {
+        let panel = NSSavePanel()
+        panel.title = "export.title".localized
+        panel.nameFieldStringValue = "FastSSH_Connections.json"
+        panel.allowedContentTypes = [.json]
+
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+
+        let encoder = JSONEncoder()
+        encoder.outputFormatting = [.prettyPrinted, .sortedKeys]
+        guard let data = try? encoder.encode(connections) else { return }
+        try? data.write(to: url, options: .atomic)
+    }
+
+    func importConnections() {
+        let panel = NSOpenPanel()
+        panel.title = "import.title".localized
+        panel.allowedContentTypes = [.json]
+        panel.allowsMultipleSelection = false
+
+        guard panel.runModal() == .OK, let url = panel.url else { return }
+        guard let data = try? Data(contentsOf: url) else { return }
+        guard let imported = try? JSONDecoder().decode([SSHConnection].self, from: data) else { return }
+
+        // Merge: skip duplicates by host+username+port
+        var added = 0
+        for var conn in imported {
+            let exists = connections.contains {
+                $0.host == conn.host && $0.username == conn.username && $0.port == conn.port
+            }
+            if !exists {
+                conn.id = UUID() // assign new ID to avoid conflicts
+                connections.append(conn)
+                added += 1
+            }
+        }
+        saveConnections()
+        importResult = "import.result".localized(added, imported.count)
+    }
+
+    @Published var importResult: String?
 }

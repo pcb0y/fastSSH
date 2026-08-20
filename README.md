@@ -15,8 +15,10 @@ So I built FastSSH: a fully native, completely free SSH tool that just works.
 ## Features
 
 - **True PTY Terminal** — Full interactive shell with color support (256-color & true color), tab completion, and proper key handling
+- **Command Autocomplete** — Smart command suggestions as you type, with history learning
 - **Built-in SFTP File Manager** — Dual-panel file browser with drag-and-drop, multi-file transfer, and directory upload/download
-- **Connection Manager** — Save, organize, and quickly connect to your servers
+- **Server Monitor** — Real-time CPU, memory, disk usage dashboard with auto-refresh
+- **Connection Manager** — Save, organize, import/export your server configs
 - **Conflict Resolution** — Smart handling when files already exist (overwrite, rename, backup, or skip)
 - **Native macOS App** — Pure Swift + SwiftUI, lightweight and fast
 - **12 Languages** — English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Português, Русский, العربية, हिन्दी
@@ -94,8 +96,10 @@ MIT — Free to use, free to modify, free forever.
 ## 功能特性
 
 - **真正的 PTY 终端** — 完整交互式 Shell，支持 256 色和真彩色，Tab 补全、快捷键全部正常工作
+- **命令联想** — 输入时智能推荐命令，自动学习历史记录
 - **内置 SFTP 文件管理器** — 双栏文件浏览器，支持拖放、多文件传输、目录上传下载
-- **连接管理** — 保存、分组、快速连接你的服务器
+- **服务器监控** — 实时显示 CPU、内存、磁盘使用率，支持自动刷新
+- **连接管理** — 保存、分组、导入/导出服务器配置
 - **冲突处理** — 文件已存在时智能提示（覆盖、重命名、备份、跳过）
 - **原生 macOS 应用** — 纯 Swift + SwiftUI 开发，轻量快速
 - **12 种语言** — 中文、英文、日文、韩文、西班牙文、法文、德文、葡萄牙文、俄文、阿拉伯文、印地文
@@ -167,8 +171,10 @@ macOSで使えるSSHクライアントを探しましたが、まともなもの
 ## 機能
 
 - **本物のPTYターミナル** — 256色・トゥルーカラー対応、Tab補完、ショートカットキー完全対応
+- **コマンド補完** — 入力中にスマートなコマンド候補を表示、履歴学習対応
 - **内蔵SFTPファイルマネージャー** — デュアルパネル、ドラッグ＆ドロップ、複数ファイル・ディレクトリ転送
-- **接続管理** — サーバー設定の保存・グループ化・クイック接続
+- **サーバーモニター** — CPU・メモリ・ディスク使用率をリアルタイム表示
+- **接続管理** — サーバー設定の保存・グループ化・インポート/エクスポート
 - **競合解決** — ファイル重複時の処理選択（上書き・リネーム・バックアップ・スキップ）
 - **ネイティブmacOSアプリ** — Pure Swift + SwiftUI、軽量高速
 - **12言語対応**
