@@ -1,6 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 import TerminalTab from './TerminalTab.vue'
+import FileBrowser from './FileBrowser.vue'
+import ServerMonitor from './ServerMonitor.vue'
 import AIPanel from './AIPanel.vue'
 
 const props = defineProps(['session'])
@@ -31,8 +33,8 @@ const showAI = ref(false)
     <div class="content-area">
       <div class="main-panel">
         <TerminalTab v-if="activeTab === 'terminal'" :sessionId="session.id" />
-        <div v-else-if="activeTab === 'files'" class="placeholder">File Browser (coming soon)</div>
-        <div v-else class="placeholder">Server Monitor (coming soon)</div>
+        <FileBrowser v-else-if="activeTab === 'files'" :sessionId="session.id" />
+        <ServerMonitor v-else :sessionId="session.id" />
       </div>
       <AIPanel v-if="showAI" :sessionId="session.id" />
     </div>
@@ -92,13 +94,5 @@ const showAI = ref(false)
 .main-panel {
   flex: 1;
   overflow: hidden;
-}
-
-.placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  color: var(--text-secondary);
 }
 </style>
