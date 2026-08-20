@@ -1,0 +1,47 @@
+{
+  "object" : {
+    "artifacts" : [
+
+    ],
+    "dependencies" : [
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "bluesocket",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/IBM-Swift/BlueSocket",
+          "name" : "Socket"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "c9894fd117457f1d006575fbfb2fdfd6f79eac03",
+            "version" : "1.0.200"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "BlueSocket"
+      },
+      {
+        "basedOn" : null,
+        "packageRef" : {
+          "identity" : "shout",
+          "kind" : "remoteSourceControl",
+          "location" : "https://github.com/jakeheis/Shout.git",
+          "name" : "Shout"
+        },
+        "state" : {
+          "checkoutState" : {
+            "revision" : "fbcae228bc68d5e2352f0790079995d27b610dbc",
+            "version" : "0.5.7"
+          },
+          "name" : "sourceControlCheckout"
+        },
+        "subpath" : "Shout"
+      }
+    ],
+    "prebuilts" : [
+
+    ]
+  },
+  "version" : 7
+}

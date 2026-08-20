@@ -1,0 +1,85 @@
+{
+  "": {
+    "dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSH.d",
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSH.o",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/primary.swiftdeps"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift": {
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.dia"
+  }
+}

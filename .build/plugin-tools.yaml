@@ -1,0 +1,202 @@
+client:
+  name: basic
+  file-system: device-agnostic
+tools: {}
+targets:
+  "FastSSH-arm64-apple-macosx-debug.exe": ["<FastSSH-arm64-apple-macosx-debug.exe>"]
+  "FastSSH-arm64-apple-macosx-debug.module": ["<FastSSH-arm64-apple-macosx-debug.module>"]
+  "PackageStructure": ["<PackageStructure>"]
+  "Shout-arm64-apple-macosx-debug.module": ["<Shout-arm64-apple-macosx-debug.module>"]
+  "Socket-arm64-apple-macosx-debug.module": ["<Socket-arm64-apple-macosx-debug.module>"]
+  "main": ["<FastSSH-arm64-apple-macosx-debug.exe>","<FastSSH-arm64-apple-macosx-debug.module>"]
+  "test": ["<FastSSH-arm64-apple-macosx-debug.exe>","<FastSSH-arm64-apple-macosx-debug.module>"]
+default: "main"
+nodes:
+  "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/":
+    is-directory-structure: true
+    content-exclusion-patterns: [".git",".build"]
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH":
+    is-mutated: true
+commands:
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH-entitlement.plist":
+    tool: write-auxiliary-file
+    inputs: ["<entitlement-plist>","<com.apple.security.get-task-allow>"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH-entitlement.plist"]
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH-entitlement.plist"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Localization/L10n.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/DerivedSources/resource_bundle_accessor.swift"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/sources"]
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/sources"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.product/Objects.LinkFileList":
+    tool: write-auxiliary-file
+    inputs: ["<link-file-list>","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ANSIParser.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/AppState.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ConnectionDialogView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ContentView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FastSSHApp.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileBrowserView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileItem.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/L10n.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHConnection.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHSession.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SessionTabView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SidebarView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalProcessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/resource_bundle_accessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Agent.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Channel.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileAttributes.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FilePermissions.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileType.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/ReadWrite.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SFTP.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSH.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHAuthMethod.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHError.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Session.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swift.o"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.product/Objects.LinkFileList"]
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.product/Objects.LinkFileList"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/Info.plist":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/Info.plist"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/Info.plist"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/Info.plist"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ar.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ar.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ar.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ar.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/de.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/de.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/de.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/de.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/en.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/en.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/en.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/en.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/es.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/es.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/es.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/es.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/fr.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/fr.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/fr.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/fr.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/hi.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/hi.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/hi.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/hi.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ja.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ja.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ja.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ja.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ko.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ko.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ko.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ko.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/pt.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/pt.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/pt.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/pt.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ru.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ru.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ru.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/ru.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hans.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/zh-Hans.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hans.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/zh-Hans.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hant.lproj/Localizable.strings":
+    tool: copy-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/zh-Hant.lproj/Localizable.strings"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hant.lproj/Localizable.strings"]
+    description: "Copying /Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Resources/zh-Hant.lproj/Localizable.strings"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/sources"]
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/sources"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/sources":
+    tool: write-auxiliary-file
+    inputs: ["<sources-file-list>","/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/sources"]
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/sources"
+
+  "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt":
+    tool: write-auxiliary-file
+    inputs: ["<swift-get-version>","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"]
+    always-out-of-date: "true"
+    description: "Write auxiliary file /Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt"
+
+  "<FastSSH-arm64-apple-macosx-debug.exe>":
+    tool: phony
+    inputs: ["<FastSSH-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    outputs: ["<FastSSH-arm64-apple-macosx-debug.exe>"]
+
+  "<FastSSH-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FastSSHApp.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/L10n.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/AppState.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileItem.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHConnection.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHSession.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ANSIParser.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalProcessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ConnectionDialogView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ContentView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileBrowserView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SessionTabView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SidebarView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/resource_bundle_accessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/FastSSH.swiftmodule"]
+    outputs: ["<FastSSH-arm64-apple-macosx-debug.module>"]
+
+  "<Shout-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Agent.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Channel.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileAttributes.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FilePermissions.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileType.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/ReadWrite.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SFTP.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSH.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHAuthMethod.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHError.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Session.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Shout.swiftmodule"]
+    outputs: ["<Shout-arm64-apple-macosx-debug.module>"]
+
+  "<Socket-arm64-apple-macosx-debug.module>":
+    tool: phony
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Socket.swiftmodule"]
+    outputs: ["<Socket-arm64-apple-macosx-debug.module>"]
+
+  "C.FastSSH-arm64-apple-macosx-debug.exe":
+    tool: shell
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ANSIParser.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/AppState.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ConnectionDialogView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ContentView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FastSSHApp.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileBrowserView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileItem.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/L10n.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHConnection.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHSession.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SessionTabView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SidebarView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalProcessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/resource_bundle_accessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Agent.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Channel.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileAttributes.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FilePermissions.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileType.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/ReadWrite.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SFTP.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSH.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHAuthMethod.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHError.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Session.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.product/Objects.LinkFileList"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH"]
+    description: "Linking ./.build/arm64-apple-macosx/debug/FastSSH"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-L","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug","-o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH","-module-name","FastSSH","-Xlinker","-no_warn_duplicate_libraries","-emit-executable","-Xlinker","-alias","-Xlinker","_FastSSH_main","-Xlinker","_main","-Xlinker","-rpath","-Xlinker","@loader_path","@/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.product/Objects.LinkFileList","-Xlinker","-rpath","-Xlinker","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift-6.2/macosx","-target","arm64-apple-macosx14.0","-L/opt/homebrew/opt/libssh2/lib","-L/opt/homebrew/opt/openssl/lib","-Xlinker","-add_ast_path","-Xlinker","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/FastSSH.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Shout.swiftmodule","-Xlinker","-add_ast_path","-Xlinker","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Socket.swiftmodule","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g"]
+
+  "C.FastSSH-arm64-apple-macosx-debug.exe-entitlements":
+    tool: shell
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH-entitlement.plist"]
+    outputs: ["<FastSSH-arm64-apple-macosx-debug.exe-CodeSigning>"]
+    description: "Applying debug entitlements to ./.build/arm64-apple-macosx/debug/FastSSH"
+    args: ["codesign","--force","--sign","-","--entitlements","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH-entitlement.plist","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH"]
+
+  "C.FastSSH-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Localization/L10n.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift","/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/DerivedSources/resource_bundle_accessor.swift","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","<FastSSH-arm64-apple-macosx-debug.module-resources>","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Shout.swiftmodule","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/sources"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FastSSHApp.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/L10n.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/AppState.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileItem.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHConnection.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SSHSession.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ANSIParser.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalProcessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ConnectionDialogView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/ContentView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/FileBrowserView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SessionTabView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/SidebarView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/TerminalView.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/resource_bundle_accessor.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/FastSSH.swiftmodule"]
+    description: "Compiling Swift Module 'FastSSH' (15 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","FastSSH","-emit-dependencies","-emit-module","-emit-module-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/FastSSH.swiftmodule","-output-file-map","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/output-file-map.json","-incremental","-c","@/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH.build/sources","-I","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx14.0","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_AVAILABLE","-Xcc","-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap","-module-cache-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-Xfrontend","-entry-point-function-name","-Xfrontend","FastSSH_main","-swift-version","6","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-package-name","fastssh"]
+
+  "C.Shout-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Socket.swiftmodule","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/sources"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Agent.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Channel.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileAttributes.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FilePermissions.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/FileType.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/ReadWrite.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SFTP.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSH.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHAuthMethod.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/SSHError.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/Session.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Shout.swiftmodule"]
+    description: "Compiling Swift Module 'Shout' (11 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Shout","-emit-dependencies","-emit-module","-emit-module-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Shout.swiftmodule","-output-file-map","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/sources","-I","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-Xcc","-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap","-module-cache-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Shout.build/include/Shout-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-suppress-warnings"]
+
+  "C.Socket-arm64-apple-macosx-debug.module":
+    tool: shell
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift","/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/swift-version--58304C5D6DBC2206.txt","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/sources"]
+    outputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swift.o","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Socket.swiftmodule"]
+    description: "Compiling Swift Module 'Socket' (3 sources)"
+    args: ["/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc","-module-name","Socket","-emit-dependencies","-emit-module","-emit-module-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules/Socket.swiftmodule","-output-file-map","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/output-file-map.json","-parse-as-library","-incremental","-c","@/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/sources","-I","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Modules","-target","arm64-apple-macosx10.13","-incremental","-enable-batch-mode","-serialize-diagnostics","-index-store-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/index/store","-Onone","-enable-testing","-j8","-DSWIFT_PACKAGE","-DDEBUG","-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE","-module-cache-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/ModuleCache","-parseable-output","-parse-as-library","-emit-objc-header","-emit-objc-header-path","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/include/Socket-Swift.h","-swift-version","5","-plugin-path","/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-g","-Xcc","-isysroot","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk","-Xcc","-F","-Xcc","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-Xcc","-fPIC","-Xcc","-g","-suppress-warnings"]
+
+  "FastSSH-arm64-apple-macosx-debug.module-resources":
+    tool: phony
+    inputs: ["/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ar.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/de.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/en.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/es.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/fr.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/hi.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ja.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ko.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/pt.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/ru.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hans.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/zh-hant.lproj/Localizable.strings","/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/FastSSH_FastSSH.bundle/Info.plist"]
+    outputs: ["<FastSSH-arm64-apple-macosx-debug.module-resources>"]
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/","/Users/zong/code/fastssh/FastSSH/Package.swift","/Users/zong/code/fastssh/FastSSH/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

@@ -1,0 +1,3 @@
+module Shout {
+    header "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/include/Shout-Swift.h"
+}

@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "रद्द करें";
+"save" = "सहेजें";
+"add" = "जोड़ें";
+"delete" = "हटाएं";
+"edit" = "संपादित करें";
+"create" = "बनाएं";
+"skip" = "छोड़ें";
+"overwrite" = "अधिलेखित करें";
+"connect" = "कनेक्ट करें";
+
+/* Content View */
+"welcome.subtitle" = "शुरू करने के लिए सर्वर से कनेक्ट करें";
+"new.connection" = "नया कनेक्शन";
+
+/* Sidebar */
+"active.sessions" = "सक्रिय सत्र";
+"connections" = "कनेक्शन";
+
+/* Connection Dialog */
+"edit.connection" = "कनेक्शन संपादित करें";
+"field.name" = "नाम";
+"field.host" = "होस्ट";
+"field.port" = "पोर्ट";
+"field.username" = "उपयोगकर्ता नाम";
+"field.auth.method" = "प्रमाणीकरण विधि";
+"auth.password" = "पासवर्ड";
+"auth.key" = "SSH कुंजी";
+"field.password" = "पासवर्ड";
+"field.key.path" = "कुंजी पथ";
+"field.group" = "समूह (वैकल्पिक)";
+
+/* Session Tab */
+"tab.terminal" = "टर्मिनल";
+"tab.files" = "फ़ाइलें";
+"status.disconnected" = "डिस्कनेक्ट";
+
+/* File Browser */
+"panel.local" = "स्थानीय";
+"panel.remote" = "रिमोट";
+"upload" = "अपलोड";
+"download" = "डाउनलोड";
+"upload.selected" = "चयनित अपलोड करें";
+"download.selected" = "चयनित डाउनलोड करें";
+"help.upload" = "चयनित फ़ाइलें/फ़ोल्डर रिमोट पर अपलोड करें";
+"help.download" = "चयनित फ़ाइलें/फ़ोल्डर स्थानीय पर डाउनलोड करें";
+"help.new.folder" = "नया फ़ोल्डर बनाएं";
+
+/* File Conflict */
+"conflict.title" = "फ़ाइल पहले से मौजूद है";
+"conflict.message" = "\"%@\" गंतव्य पर पहले से मौजूद है। आप क्या करना चाहेंगे?";
+"conflict.rename" = "नाम बदलें";
+"conflict.backup" = "बैकअप (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "%@ अपलोड हो रहा है (%d/%d)...";
+"status.uploading.single" = "%@ अपलोड हो रहा है...";
+"status.upload.failed" = "%@ अपलोड विफल: %@";
+"status.uploaded" = "%d आइटम अपलोड हुए";
+"status.downloading" = "%@ डाउनलोड हो रहा है (%d/%d)...";
+"status.downloading.single" = "%@ डाउनलोड हो रहा है...";
+"status.download.failed" = "%@ डाउनलोड विफल: %@";
+"status.downloaded" = "%d आइटम डाउनलोड हुए";
+
+/* New Folder */
+"new.folder.title" = "नया फ़ोल्डर";
+"new.folder.message" = "फ़ोल्डर का नाम दर्ज करें:";
+"new.folder.default" = "new_folder";
+"new.folder.failed" = "फ़ोल्डर बनाने में विफल: %@";

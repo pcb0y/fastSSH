@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "Abbrechen";
+"save" = "Speichern";
+"add" = "Hinzufügen";
+"delete" = "Löschen";
+"edit" = "Bearbeiten";
+"create" = "Erstellen";
+"skip" = "Überspringen";
+"overwrite" = "Überschreiben";
+"connect" = "Verbinden";
+
+/* Content View */
+"welcome.subtitle" = "Verbinden Sie sich mit einem Server, um zu beginnen";
+"new.connection" = "Neue Verbindung";
+
+/* Sidebar */
+"active.sessions" = "Aktive Sitzungen";
+"connections" = "Verbindungen";
+
+/* Connection Dialog */
+"edit.connection" = "Verbindung bearbeiten";
+"field.name" = "Name";
+"field.host" = "Host";
+"field.port" = "Port";
+"field.username" = "Benutzername";
+"field.auth.method" = "Authentifizierungsmethode";
+"auth.password" = "Passwort";
+"auth.key" = "SSH-Schlüssel";
+"field.password" = "Passwort";
+"field.key.path" = "Schlüsselpfad";
+"field.group" = "Gruppe (optional)";
+
+/* Session Tab */
+"tab.terminal" = "Terminal";
+"tab.files" = "Dateien";
+"status.disconnected" = "Getrennt";
+
+/* File Browser */
+"panel.local" = "Lokal";
+"panel.remote" = "Remote";
+"upload" = "Hochladen";
+"download" = "Herunterladen";
+"upload.selected" = "Auswahl hochladen";
+"download.selected" = "Auswahl herunterladen";
+"help.upload" = "Ausgewählte Dateien/Ordner auf den Server hochladen";
+"help.download" = "Ausgewählte Dateien/Ordner lokal herunterladen";
+"help.new.folder" = "Neuen Ordner erstellen";
+
+/* File Conflict */
+"conflict.title" = "Datei existiert bereits";
+"conflict.message" = "\"%@\" existiert bereits am Zielort. Was möchten Sie tun?";
+"conflict.rename" = "Umbenennen";
+"conflict.backup" = "Sicherung (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "%@ wird hochgeladen (%d/%d)...";
+"status.uploading.single" = "%@ wird hochgeladen...";
+"status.upload.failed" = "Hochladen von %@ fehlgeschlagen: %@";
+"status.uploaded" = "%d Element(e) hochgeladen";
+"status.downloading" = "%@ wird heruntergeladen (%d/%d)...";
+"status.downloading.single" = "%@ wird heruntergeladen...";
+"status.download.failed" = "Herunterladen von %@ fehlgeschlagen: %@";
+"status.downloaded" = "%d Element(e) heruntergeladen";
+
+/* New Folder */
+"new.folder.title" = "Neuer Ordner";
+"new.folder.message" = "Ordnername eingeben:";
+"new.folder.default" = "neuer_ordner";
+"new.folder.failed" = "Ordner erstellen fehlgeschlagen: %@";

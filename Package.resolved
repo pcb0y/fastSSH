@@ -1,0 +1,24 @@
+{
+  "originHash" : "e2110ae104cdc8b78a2b4c6d94e364b2121a5209c6d918b25321f5bbf88ac6c8",
+  "pins" : [
+    {
+      "identity" : "bluesocket",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/IBM-Swift/BlueSocket",
+      "state" : {
+        "revision" : "c9894fd117457f1d006575fbfb2fdfd6f79eac03",
+        "version" : "1.0.200"
+      }
+    },
+    {
+      "identity" : "shout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/jakeheis/Shout.git",
+      "state" : {
+        "revision" : "fbcae228bc68d5e2352f0790079995d27b610dbc",
+        "version" : "0.5.7"
+      }
+    }
+  ],
+  "version" : 3
+}

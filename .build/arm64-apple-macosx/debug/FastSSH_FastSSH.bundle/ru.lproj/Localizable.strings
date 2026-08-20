@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "Отмена";
+"save" = "Сохранить";
+"add" = "Добавить";
+"delete" = "Удалить";
+"edit" = "Изменить";
+"create" = "Создать";
+"skip" = "Пропустить";
+"overwrite" = "Перезаписать";
+"connect" = "Подключить";
+
+/* Content View */
+"welcome.subtitle" = "Подключитесь к серверу, чтобы начать";
+"new.connection" = "Новое подключение";
+
+/* Sidebar */
+"active.sessions" = "Активные сессии";
+"connections" = "Подключения";
+
+/* Connection Dialog */
+"edit.connection" = "Изменить подключение";
+"field.name" = "Имя";
+"field.host" = "Хост";
+"field.port" = "Порт";
+"field.username" = "Пользователь";
+"field.auth.method" = "Метод аутентификации";
+"auth.password" = "Пароль";
+"auth.key" = "SSH-ключ";
+"field.password" = "Пароль";
+"field.key.path" = "Путь к ключу";
+"field.group" = "Группа (необязательно)";
+
+/* Session Tab */
+"tab.terminal" = "Терминал";
+"tab.files" = "Файлы";
+"status.disconnected" = "Отключено";
+
+/* File Browser */
+"panel.local" = "Локальный";
+"panel.remote" = "Удалённый";
+"upload" = "Загрузить";
+"download" = "Скачать";
+"upload.selected" = "Загрузить выбранное";
+"download.selected" = "Скачать выбранное";
+"help.upload" = "Загрузить выбранные файлы/папки на сервер";
+"help.download" = "Скачать выбранные файлы/папки на локальный диск";
+"help.new.folder" = "Создать новую папку";
+
+/* File Conflict */
+"conflict.title" = "Файл уже существует";
+"conflict.message" = "\"%@\" уже существует в месте назначения. Что вы хотите сделать?";
+"conflict.rename" = "Переименовать";
+"conflict.backup" = "Резервная копия (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "Загрузка %@ (%d/%d)...";
+"status.uploading.single" = "Загрузка %@...";
+"status.upload.failed" = "Ошибка загрузки %@: %@";
+"status.uploaded" = "Загружено элементов: %d";
+"status.downloading" = "Скачивание %@ (%d/%d)...";
+"status.downloading.single" = "Скачивание %@...";
+"status.download.failed" = "Ошибка скачивания %@: %@";
+"status.downloaded" = "Скачано элементов: %d";
+
+/* New Folder */
+"new.folder.title" = "Новая папка";
+"new.folder.message" = "Введите имя папки:";
+"new.folder.default" = "новая_папка";
+"new.folder.failed" = "Ошибка создания папки: %@";

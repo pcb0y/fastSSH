@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "Cancel";
+"save" = "Save";
+"add" = "Add";
+"delete" = "Delete";
+"edit" = "Edit";
+"create" = "Create";
+"skip" = "Skip";
+"overwrite" = "Overwrite";
+"connect" = "Connect";
+
+/* Content View */
+"welcome.subtitle" = "Connect to a server to get started";
+"new.connection" = "New Connection";
+
+/* Sidebar */
+"active.sessions" = "Active Sessions";
+"connections" = "Connections";
+
+/* Connection Dialog */
+"edit.connection" = "Edit Connection";
+"field.name" = "Name";
+"field.host" = "Host";
+"field.port" = "Port";
+"field.username" = "Username";
+"field.auth.method" = "Auth Method";
+"auth.password" = "Password";
+"auth.key" = "SSH Key";
+"field.password" = "Password";
+"field.key.path" = "Key Path";
+"field.group" = "Group (optional)";
+
+/* Session Tab */
+"tab.terminal" = "Terminal";
+"tab.files" = "Files";
+"status.disconnected" = "Disconnected";
+
+/* File Browser */
+"panel.local" = "Local";
+"panel.remote" = "Remote";
+"upload" = "Upload";
+"download" = "Download";
+"upload.selected" = "Upload Selected";
+"download.selected" = "Download Selected";
+"help.upload" = "Upload selected files/folders to remote";
+"help.download" = "Download selected files/folders to local";
+"help.new.folder" = "Create new folder";
+
+/* File Conflict */
+"conflict.title" = "File Already Exists";
+"conflict.message" = "\"%@\" already exists at the destination. What would you like to do?";
+"conflict.rename" = "Rename";
+"conflict.backup" = "Backup (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "Uploading %@ (%d/%d)...";
+"status.uploading.single" = "Uploading %@...";
+"status.upload.failed" = "Upload %@ failed: %@";
+"status.uploaded" = "Uploaded %d item(s)";
+"status.downloading" = "Downloading %@ (%d/%d)...";
+"status.downloading.single" = "Downloading %@...";
+"status.download.failed" = "Download %@ failed: %@";
+"status.downloaded" = "Downloaded %d item(s)";
+
+/* New Folder */
+"new.folder.title" = "New Folder";
+"new.folder.message" = "Enter folder name:";
+"new.folder.default" = "new_folder";
+"new.folder.failed" = "Create folder failed: %@";

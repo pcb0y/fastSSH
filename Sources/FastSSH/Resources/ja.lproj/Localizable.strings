@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "キャンセル";
+"save" = "保存";
+"add" = "追加";
+"delete" = "削除";
+"edit" = "編集";
+"create" = "作成";
+"skip" = "スキップ";
+"overwrite" = "上書き";
+"connect" = "接続";
+
+/* Content View */
+"welcome.subtitle" = "サーバーに接続して開始";
+"new.connection" = "新規接続";
+
+/* Sidebar */
+"active.sessions" = "アクティブなセッション";
+"connections" = "接続一覧";
+
+/* Connection Dialog */
+"edit.connection" = "接続を編集";
+"field.name" = "名前";
+"field.host" = "ホスト";
+"field.port" = "ポート";
+"field.username" = "ユーザー名";
+"field.auth.method" = "認証方法";
+"auth.password" = "パスワード";
+"auth.key" = "SSH鍵";
+"field.password" = "パスワード";
+"field.key.path" = "鍵のパス";
+"field.group" = "グループ（任意）";
+
+/* Session Tab */
+"tab.terminal" = "ターミナル";
+"tab.files" = "ファイル";
+"status.disconnected" = "切断済み";
+
+/* File Browser */
+"panel.local" = "ローカル";
+"panel.remote" = "リモート";
+"upload" = "アップロード";
+"download" = "ダウンロード";
+"upload.selected" = "選択をアップロード";
+"download.selected" = "選択をダウンロード";
+"help.upload" = "選択したファイル/フォルダをリモートにアップロード";
+"help.download" = "選択したファイル/フォルダをローカルにダウンロード";
+"help.new.folder" = "新しいフォルダを作成";
+
+/* File Conflict */
+"conflict.title" = "ファイルが既に存在します";
+"conflict.message" = "\"%@\" は既に存在します。どうしますか？";
+"conflict.rename" = "名前を変更";
+"conflict.backup" = "バックアップ (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "%@ をアップロード中 (%d/%d)...";
+"status.uploading.single" = "%@ をアップロード中...";
+"status.upload.failed" = "%@ のアップロードに失敗: %@";
+"status.uploaded" = "%d 件アップロード完了";
+"status.downloading" = "%@ をダウンロード中 (%d/%d)...";
+"status.downloading.single" = "%@ をダウンロード中...";
+"status.download.failed" = "%@ のダウンロードに失敗: %@";
+"status.downloaded" = "%d 件ダウンロード完了";
+
+/* New Folder */
+"new.folder.title" = "新しいフォルダ";
+"new.folder.message" = "フォルダ名を入力:";
+"new.folder.default" = "new_folder";
+"new.folder.failed" = "フォルダの作成に失敗: %@";

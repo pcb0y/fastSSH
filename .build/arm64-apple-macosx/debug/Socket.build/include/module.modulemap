@@ -1,0 +1,3 @@
+module Socket {
+    header "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/include/Socket-Swift.h"
+}

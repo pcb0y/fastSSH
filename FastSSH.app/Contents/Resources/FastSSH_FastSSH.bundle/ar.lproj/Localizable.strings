@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "إلغاء";
+"save" = "حفظ";
+"add" = "إضافة";
+"delete" = "حذف";
+"edit" = "تعديل";
+"create" = "إنشاء";
+"skip" = "تخطي";
+"overwrite" = "استبدال";
+"connect" = "اتصال";
+
+/* Content View */
+"welcome.subtitle" = "اتصل بخادم للبدء";
+"new.connection" = "اتصال جديد";
+
+/* Sidebar */
+"active.sessions" = "الجلسات النشطة";
+"connections" = "الاتصالات";
+
+/* Connection Dialog */
+"edit.connection" = "تعديل الاتصال";
+"field.name" = "الاسم";
+"field.host" = "المضيف";
+"field.port" = "المنفذ";
+"field.username" = "اسم المستخدم";
+"field.auth.method" = "طريقة المصادقة";
+"auth.password" = "كلمة المرور";
+"auth.key" = "مفتاح SSH";
+"field.password" = "كلمة المرور";
+"field.key.path" = "مسار المفتاح";
+"field.group" = "المجموعة (اختياري)";
+
+/* Session Tab */
+"tab.terminal" = "الطرفية";
+"tab.files" = "الملفات";
+"status.disconnected" = "غير متصل";
+
+/* File Browser */
+"panel.local" = "محلي";
+"panel.remote" = "بعيد";
+"upload" = "رفع";
+"download" = "تنزيل";
+"upload.selected" = "رفع المحدد";
+"download.selected" = "تنزيل المحدد";
+"help.upload" = "رفع الملفات/المجلدات المحددة إلى الخادم";
+"help.download" = "تنزيل الملفات/المجلدات المحددة إلى المحلي";
+"help.new.folder" = "إنشاء مجلد جديد";
+
+/* File Conflict */
+"conflict.title" = "الملف موجود بالفعل";
+"conflict.message" = "\"%@\" موجود بالفعل في الوجهة. ماذا تريد أن تفعل؟";
+"conflict.rename" = "إعادة تسمية";
+"conflict.backup" = "نسخ احتياطي (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "جارٍ رفع %@ (%d/%d)...";
+"status.uploading.single" = "جارٍ رفع %@...";
+"status.upload.failed" = "فشل رفع %@: %@";
+"status.uploaded" = "تم رفع %d عنصر(عناصر)";
+"status.downloading" = "جارٍ تنزيل %@ (%d/%d)...";
+"status.downloading.single" = "جارٍ تنزيل %@...";
+"status.download.failed" = "فشل تنزيل %@: %@";
+"status.downloaded" = "تم تنزيل %d عنصر(عناصر)";
+
+/* New Folder */
+"new.folder.title" = "مجلد جديد";
+"new.folder.message" = "أدخل اسم المجلد:";
+"new.folder.default" = "مجلد_جديد";
+"new.folder.failed" = "فشل إنشاء المجلد: %@";

@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "取消";
+"save" = "保存";
+"add" = "添加";
+"delete" = "删除";
+"edit" = "编辑";
+"create" = "创建";
+"skip" = "跳过";
+"overwrite" = "覆盖";
+"connect" = "连接";
+
+/* Content View */
+"welcome.subtitle" = "连接服务器以开始使用";
+"new.connection" = "新建连接";
+
+/* Sidebar */
+"active.sessions" = "活动会话";
+"connections" = "连接列表";
+
+/* Connection Dialog */
+"edit.connection" = "编辑连接";
+"field.name" = "名称";
+"field.host" = "主机";
+"field.port" = "端口";
+"field.username" = "用户名";
+"field.auth.method" = "认证方式";
+"auth.password" = "密码";
+"auth.key" = "SSH 密钥";
+"field.password" = "密码";
+"field.key.path" = "密钥路径";
+"field.group" = "分组（可选）";
+
+/* Session Tab */
+"tab.terminal" = "终端";
+"tab.files" = "文件";
+"status.disconnected" = "已断开连接";
+
+/* File Browser */
+"panel.local" = "本地";
+"panel.remote" = "远程";
+"upload" = "上传";
+"download" = "下载";
+"upload.selected" = "上传所选";
+"download.selected" = "下载所选";
+"help.upload" = "上传所选文件/文件夹到远程";
+"help.download" = "下载所选文件/文件夹到本地";
+"help.new.folder" = "新建文件夹";
+
+/* File Conflict */
+"conflict.title" = "文件已存在";
+"conflict.message" = "目标位置已存在「%@」，请选择处理方式：";
+"conflict.rename" = "重命名";
+"conflict.backup" = "备份 (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "正在上传 %@（%d/%d）...";
+"status.uploading.single" = "正在上传 %@...";
+"status.upload.failed" = "上传 %@ 失败：%@";
+"status.uploaded" = "已上传 %d 个项目";
+"status.downloading" = "正在下载 %@（%d/%d）...";
+"status.downloading.single" = "正在下载 %@...";
+"status.download.failed" = "下载 %@ 失败：%@";
+"status.downloaded" = "已下载 %d 个项目";
+
+/* New Folder */
+"new.folder.title" = "新建文件夹";
+"new.folder.message" = "请输入文件夹名称：";
+"new.folder.default" = "new_folder";
+"new.folder.failed" = "创建文件夹失败：%@";

@@ -1,0 +1,13 @@
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift
+/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift

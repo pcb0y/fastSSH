@@ -1,0 +1,70 @@
+/* General */
+"app.title" = "FastSSH";
+"cancel" = "Annuler";
+"save" = "Enregistrer";
+"add" = "Ajouter";
+"delete" = "Supprimer";
+"edit" = "Modifier";
+"create" = "Créer";
+"skip" = "Ignorer";
+"overwrite" = "Écraser";
+"connect" = "Connecter";
+
+/* Content View */
+"welcome.subtitle" = "Connectez-vous à un serveur pour commencer";
+"new.connection" = "Nouvelle connexion";
+
+/* Sidebar */
+"active.sessions" = "Sessions actives";
+"connections" = "Connexions";
+
+/* Connection Dialog */
+"edit.connection" = "Modifier la connexion";
+"field.name" = "Nom";
+"field.host" = "Hôte";
+"field.port" = "Port";
+"field.username" = "Utilisateur";
+"field.auth.method" = "Méthode d'authentification";
+"auth.password" = "Mot de passe";
+"auth.key" = "Clé SSH";
+"field.password" = "Mot de passe";
+"field.key.path" = "Chemin de la clé";
+"field.group" = "Groupe (facultatif)";
+
+/* Session Tab */
+"tab.terminal" = "Terminal";
+"tab.files" = "Fichiers";
+"status.disconnected" = "Déconnecté";
+
+/* File Browser */
+"panel.local" = "Local";
+"panel.remote" = "Distant";
+"upload" = "Envoyer";
+"download" = "Télécharger";
+"upload.selected" = "Envoyer la sélection";
+"download.selected" = "Télécharger la sélection";
+"help.upload" = "Envoyer les fichiers/dossiers sélectionnés vers le distant";
+"help.download" = "Télécharger les fichiers/dossiers sélectionnés en local";
+"help.new.folder" = "Créer un nouveau dossier";
+
+/* File Conflict */
+"conflict.title" = "Le fichier existe déjà";
+"conflict.message" = "\"%@\" existe déjà à la destination. Que souhaitez-vous faire ?";
+"conflict.rename" = "Renommer";
+"conflict.backup" = "Sauvegarder (.bak)";
+
+/* Transfer Status */
+"status.uploading" = "Envoi de %@ (%d/%d)...";
+"status.uploading.single" = "Envoi de %@...";
+"status.upload.failed" = "Échec de l'envoi de %@ : %@";
+"status.uploaded" = "%d élément(s) envoyé(s)";
+"status.downloading" = "Téléchargement de %@ (%d/%d)...";
+"status.downloading.single" = "Téléchargement de %@...";
+"status.download.failed" = "Échec du téléchargement de %@ : %@";
+"status.downloaded" = "%d élément(s) téléchargé(s)";
+
+/* New Folder */
+"new.folder.title" = "Nouveau dossier";
+"new.folder.message" = "Entrez le nom du dossier :";
+"new.folder.default" = "nouveau_dossier";
+"new.folder.failed" = "Échec de la création du dossier : %@";

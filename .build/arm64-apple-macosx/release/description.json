@@ -1,0 +1,1038 @@
+{
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "explicitTargetDependencyImportCheckingMode" : {
+    "none" : {
+
+    }
+  },
+  "generatedSourceTargetSet" : [
+
+  ],
+  "pluginDescriptions" : [
+
+  ],
+  "swiftCommands" : {
+    "C.FastSSH-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/sources",
+      "importPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Shout.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/sources"
+        }
+      ],
+      "isLibrary" : false,
+      "moduleName" : "FastSSH",
+      "moduleOutputPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/FastSSH.swiftmodule",
+      "objects" : [
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx14.0",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap",
+        "-I/opt/homebrew/Cellar/libssh2/1.11.1_4/include",
+        "-I/opt/homebrew/Cellar/openssl@3/3.6.3/include",
+        "-module-cache-path",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-Xfrontend",
+        "-entry-point-function-name",
+        "-Xfrontend",
+        "FastSSH_main",
+        "-swift-version",
+        "6",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-package-name",
+        "fastssh"
+      ],
+      "outputFileMapPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/FastSSH.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift",
+        "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift"
+      ],
+      "tempsPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.Shout-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/sources",
+      "importPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Socket.swiftmodule"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Shout",
+      "moduleOutputPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Shout.swiftmodule",
+      "objects" : [
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Agent.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Channel.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileAttributes.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FilePermissions.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileType.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/ReadWrite.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SFTP.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSH.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHAuthMethod.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHError.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Session.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-Xcc",
+        "-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap",
+        "-I/opt/homebrew/Cellar/libssh2/1.11.1_4/include",
+        "-I/opt/homebrew/Cellar/openssl@3/3.6.3/include",
+        "-module-cache-path",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/include/Shout-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings"
+      ],
+      "outputFileMapPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Agent.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Channel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileAttributes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FilePermissions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/ReadWrite.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SFTP.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSH.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHAuthMethod.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Session.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Shout.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift"
+      ],
+      "tempsPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build",
+      "wholeModuleOptimization" : true
+    },
+    "C.Socket-arm64-apple-macosx-release.module" : {
+      "executable" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "fileList" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/sources",
+      "importPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "inputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/sources"
+        }
+      ],
+      "isLibrary" : true,
+      "moduleName" : "Socket",
+      "moduleOutputPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Socket.swiftmodule",
+      "objects" : [
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/Socket.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketProtocols.swift.o",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketUtils.swift.o"
+      ],
+      "otherArguments" : [
+        "-target",
+        "arm64-apple-macosx10.13",
+        "-whole-module-optimization",
+        "-num-threads",
+        "8",
+        "-serialize-diagnostics",
+        "-O",
+        "-j8",
+        "-DSWIFT_PACKAGE",
+        "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+        "-module-cache-path",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+        "-parseable-output",
+        "-parse-as-library",
+        "-emit-objc-header",
+        "-emit-objc-header-path",
+        "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/include/Socket-Swift.h",
+        "-swift-version",
+        "5",
+        "-plugin-path",
+        "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+        "-sdk",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-F",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-I",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-L",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+        "-g",
+        "-Xcc",
+        "-isysroot",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+        "-Xcc",
+        "-F",
+        "-Xcc",
+        "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+        "-Xcc",
+        "-fPIC",
+        "-Xcc",
+        "-g",
+        "-suppress-warnings"
+      ],
+      "outputFileMapPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/output-file-map.json",
+      "outputs" : [
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/Socket.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketProtocols.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketUtils.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules/Socket.swiftmodule"
+        }
+      ],
+      "prepareForIndexing" : false,
+      "sources" : [
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift",
+        "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift"
+      ],
+      "tempsPath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build",
+      "wholeModuleOptimization" : true
+    }
+  },
+  "swiftFrontendCommands" : {
+
+  },
+  "swiftTargetScanArgs" : {
+    "FastSSH" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "FastSSH",
+      "-package-name",
+      "fastssh",
+      "-c",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift",
+      "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift",
+      "-I",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx14.0",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap",
+      "-I/opt/homebrew/Cellar/libssh2/1.11.1_4/include",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.3/include",
+      "-module-cache-path",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-Xfrontend",
+      "-entry-point-function-name",
+      "-Xfrontend",
+      "FastSSH_main",
+      "-swift-version",
+      "6",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-package-name",
+      "fastssh",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "Shout" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Shout",
+      "-c",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift",
+      "-I",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-Xcc",
+      "-fmodule-map-file=/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/CSSH/module.modulemap",
+      "-I/opt/homebrew/Cellar/libssh2/1.11.1_4/include",
+      "-I/opt/homebrew/Cellar/openssl@3/3.6.3/include",
+      "-module-cache-path",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/include/Shout-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ],
+    "Socket" : [
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc",
+      "-module-name",
+      "Socket",
+      "-c",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift",
+      "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift",
+      "-I",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Modules",
+      "-target",
+      "arm64-apple-macosx10.13",
+      "-whole-module-optimization",
+      "-num-threads",
+      "8",
+      "-serialize-diagnostics",
+      "-O",
+      "-j8",
+      "-DSWIFT_PACKAGE",
+      "-DSWIFT_MODULE_RESOURCE_BUNDLE_UNAVAILABLE",
+      "-module-cache-path",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/ModuleCache",
+      "-parseable-output",
+      "-parse-as-library",
+      "-emit-objc-header",
+      "-emit-objc-header-path",
+      "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/include/Socket-Swift.h",
+      "-swift-version",
+      "5",
+      "-plugin-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/host/plugins/testing",
+      "-sdk",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-F",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-I",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-L",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib",
+      "-g",
+      "-Xcc",
+      "-isysroot",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX26.5.sdk",
+      "-Xcc",
+      "-F",
+      "-Xcc",
+      "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks",
+      "-Xcc",
+      "-fPIC",
+      "-Xcc",
+      "-g",
+      "-suppress-warnings",
+      "-driver-use-frontend-path",
+      "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    ]
+  },
+  "targetDependencyMap" : {
+    "FastSSH" : [
+      "Shout",
+      "Socket",
+      "CSSH"
+    ],
+    "Shout" : [
+      "Socket",
+      "CSSH"
+    ],
+    "Socket" : [
+
+    ]
+  },
+  "testDiscoveryCommands" : {
+
+  },
+  "testEntryPointCommands" : {
+
+  },
+  "traitConfiguration" : {
+    "default" : {
+
+    }
+  },
+  "writeCommands" : {
+    "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/App/FastSSHApp.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/AppState.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/FileItem.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Models/SSHConnection.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/SSH/SSHSession.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/ANSIParser.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Terminal/TerminalProcessor.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ConnectionDialogView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/ContentView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/FileBrowserView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SessionTabView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/SidebarView.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/Sources/FastSSH/Views/TerminalView.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/sources"
+    },
+    "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.product/Objects.LinkFileList" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<link-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ANSIParser.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/AppState.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ConnectionDialogView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/ContentView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FastSSHApp.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileBrowserView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/FileItem.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHConnection.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SSHSession.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SessionTabView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/SidebarView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalProcessor.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.build/TerminalView.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Agent.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Channel.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileAttributes.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FilePermissions.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/FileType.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/ReadWrite.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SFTP.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSH.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHAuthMethod.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/SSHError.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/Session.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/Socket.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketProtocols.swift.o"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/SocketUtils.swift.o"
+        }
+      ],
+      "outputFilePath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/FastSSH.product/Objects.LinkFileList"
+    },
+    "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Agent.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Channel.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileAttributes.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FilePermissions.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/FileType.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/ReadWrite.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SFTP.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSH.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHAuthMethod.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/SSHError.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/Shout/Sources/Shout/Session.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Shout.build/sources"
+    },
+    "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/sources" : {
+      "alwaysOutOfDate" : false,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<sources-file-list>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift"
+        }
+      ],
+      "outputFilePath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/Socket.build/sources"
+    },
+    "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt" : {
+      "alwaysOutOfDate" : true,
+      "inputs" : [
+        {
+          "kind" : "virtual",
+          "name" : "<swift-get-version>"
+        },
+        {
+          "kind" : "file",
+          "name" : "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+        }
+      ],
+      "outputFilePath" : "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/release/swift-version--58304C5D6DBC2206.txt"
+    }
+  }
+}

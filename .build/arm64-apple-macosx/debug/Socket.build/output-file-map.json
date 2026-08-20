@@ -1,0 +1,26 @@
+{
+  "": {
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/primary.swiftdeps"
+  },
+  "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/Socket.swift": {
+    "dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.d",
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/Socket.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketProtocols.swift": {
+    "dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.d",
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketProtocols.dia"
+  },
+  "/Users/zong/code/fastssh/FastSSH/.build/checkouts/BlueSocket/Sources/Socket/SocketUtils.swift": {
+    "dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.d",
+    "object": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swift.o",
+    "swiftmodule": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils~partial.swiftmodule",
+    "swift-dependencies": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.swiftdeps",
+    "diagnostics": "/Users/zong/code/fastssh/FastSSH/.build/arm64-apple-macosx/debug/Socket.build/SocketUtils.dia"
+  }
+}
