@@ -5,6 +5,7 @@ import AppKit
 struct FastSSHApp: App {
     @StateObject private var appState = AppState()
     @StateObject private var languageManager = LanguageManager.shared
+    @StateObject private var aiConfig = AIConfigStore.shared
     @NSApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
@@ -12,6 +13,7 @@ struct FastSSHApp: App {
             ContentView()
                 .environmentObject(appState)
                 .environmentObject(languageManager)
+                .environmentObject(aiConfig)
                 .id(languageManager.currentLanguage)
         }
         .windowStyle(.titleBar)

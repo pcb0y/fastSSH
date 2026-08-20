@@ -79,3 +79,20 @@
 "import.result" = "%d von %d Verbindung(en) importiert";
 
 "tab.monitor" = "Monitor";
+
+/* AI Assistant */
+"ai.placeholder" = "Beschreiben Sie, was Sie tun möchten...";
+"ai.thinking" = "Denke nach...";
+"ai.run" = "Ausführen";
+"ai.copy" = "Kopieren";
+"ai.settings" = "KI-Einstellungen";
+"ai.provider" = "Anbieter";
+"ai.endpoint" = "API-Endpunkt";
+"ai.model" = "Modell";
+
+"ai.agent" = "KI-Assistent";
+"ai.stop" = "Stoppen";
+"ai.result" = "Ergebnis";
+"ai.error.api" = "API-Fehler: %@";
+"ai.error.parse" = "KI-Antwort konnte nicht analysiert werden";
+"ai.error.notconfigured" = "KI nicht konfiguriert. Bitte in den Einstellungen einrichten.";

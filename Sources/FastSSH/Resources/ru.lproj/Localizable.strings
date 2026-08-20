@@ -79,3 +79,20 @@
 "import.result" = "Импортировано %d из %d подключений";
 
 "tab.monitor" = "Монитор";
+
+/* AI Assistant */
+"ai.placeholder" = "Опишите, что хотите сделать...";
+"ai.thinking" = "Думаю...";
+"ai.run" = "Выполнить";
+"ai.copy" = "Копировать";
+"ai.settings" = "Настройки ИИ";
+"ai.provider" = "Провайдер";
+"ai.endpoint" = "API Endpoint";
+"ai.model" = "Модель";
+
+"ai.agent" = "ИИ-агент";
+"ai.stop" = "Остановить";
+"ai.result" = "Результат";
+"ai.error.api" = "Ошибка API: %@";
+"ai.error.parse" = "Не удалось разобрать ответ ИИ";
+"ai.error.notconfigured" = "ИИ не настроен. Настройте в параметрах.";

@@ -79,3 +79,22 @@
 "import.result" = "已导入 %d / %d 个连接";
 
 "tab.monitor" = "监控";
+
+/* AI Assistant */
+"ai.placeholder" = "描述你想执行的操作...";
+"ai.thinking" = "思考中...";
+"ai.run" = "执行";
+"ai.copy" = "复制";
+"ai.settings" = "AI 设置";
+"ai.provider" = "服务商";
+"ai.endpoint" = "API 地址";
+"ai.model" = "模型";
+"ai.agent" = "AI 助手";
+"ai.stop" = "停止";
+"ai.result" = "结果";
+"ai.fetch.models" = "获取模型列表";
+"ai.custom.model" = "自定义";
+"ai.custom.model.input" = "或手动输入模型名称";
+"ai.error.api" = "API 错误：%@";
+"ai.error.parse" = "解析 AI 响应失败";
+"ai.error.notconfigured" = "AI 未配置，请在设置中完成配置。";

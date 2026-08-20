@@ -79,3 +79,20 @@
 "import.result" = "已匯入 %d / %d 個連線";
 
 "tab.monitor" = "監控";
+
+/* AI Assistant */
+"ai.placeholder" = "描述你想執行的操作...";
+"ai.thinking" = "思考中...";
+"ai.run" = "執行";
+"ai.copy" = "複製";
+"ai.settings" = "AI 設定";
+"ai.provider" = "服務商";
+"ai.endpoint" = "API 位址";
+"ai.model" = "模型";
+
+"ai.agent" = "AI 助手";
+"ai.stop" = "停止";
+"ai.result" = "結果";
+"ai.error.api" = "API 錯誤：%@";
+"ai.error.parse" = "解析 AI 回應失敗";
+"ai.error.notconfigured" = "AI 未配置，請在設定中完成配置。";

@@ -79,3 +79,20 @@
 "import.result" = "%2$d 件中 %1$d 件インポート";
 
 "tab.monitor" = "モニター";
+
+/* AI Assistant */
+"ai.placeholder" = "実行したい操作を入力...";
+"ai.thinking" = "考え中...";
+"ai.run" = "実行";
+"ai.copy" = "コピー";
+"ai.settings" = "AI設定";
+"ai.provider" = "プロバイダー";
+"ai.endpoint" = "APIエンドポイント";
+"ai.model" = "モデル";
+
+"ai.agent" = "AI アシスタント";
+"ai.stop" = "停止";
+"ai.result" = "結果";
+"ai.error.api" = "APIエラー：%@";
+"ai.error.parse" = "AI応答の解析に失敗しました";
+"ai.error.notconfigured" = "AIが未設定です。設定画面で設定してください。";
