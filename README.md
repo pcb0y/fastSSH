@@ -1,6 +1,6 @@
 # FastSSH
 
-A free, native macOS SSH client with built-in SFTP file manager.
+A free, native macOS SSH client with built-in SFTP file manager and AI Agent.
 
 ---
 
@@ -15,11 +15,13 @@ So I built FastSSH: a fully native, completely free SSH tool that just works.
 ## Features
 
 - **True PTY Terminal** — Full interactive shell with color support (256-color & true color), tab completion, and proper key handling
-- **Command Autocomplete** — Smart command suggestions as you type, with history learning
 - **Built-in SFTP File Manager** — Dual-panel file browser with drag-and-drop, multi-file transfer, and directory upload/download
-- **Server Monitor** — Real-time CPU, memory, disk usage dashboard with auto-refresh
-- **Connection Manager** — Save, organize, import/export your server configs
+- **Connection Manager** — Save, organize, and quickly connect to your servers
 - **Conflict Resolution** — Smart handling when files already exist (overwrite, rename, backup, or skip)
+- **Command Autocomplete** — Intelligent command suggestions based on history and built-in commands
+- **Server Monitor** — Real-time CPU, memory, and disk usage monitoring
+- **AI Agent** — Autonomous AI assistant that executes commands, reads output, and iterates until the task is complete. Supports OpenAI, Anthropic, DeepSeek, Qwen (通义千问), Ollama, and any OpenAI-compatible API
+- **Config Import/Export** — Export and import all settings (connections + AI config) as a single JSON file
 - **Native macOS App** — Pure Swift + SwiftUI, lightweight and fast
 - **12 Languages** — English, 简体中文, 繁體中文, 日本語, 한국어, Español, Français, Deutsch, Português, Русский, العربية, हिन्दी
 
@@ -46,28 +48,31 @@ brew install libssh2 openssl
 
 # Clone and build
 git clone https://github.com/pcb0y/fastSSH.git
-cd fastssh/FastSSH
+cd fastSSH
 swift build -c release
 
 # Launch
-open FastSSH.app
-```
-
-### Build DMG yourself
-
-```bash
-cd fastssh
-mkdir -p dist/dmg_content
-cp -R FastSSH/FastSSH.app dist/dmg_content/
-ln -sf /Applications dist/dmg_content/Applications
-hdiutil create -volname "FastSSH" -srcfolder dist/dmg_content -ov -format UDZO dist/FastSSH.dmg
+swift run
 ```
 
 ---
 
-## Screenshots
+## AI Agent
 
-<!-- Add screenshots here -->
+FastSSH includes a built-in AI Agent that can autonomously operate your server:
+
+1. Click the **AI Agent** button in the tab bar
+2. Configure your AI provider (Settings gear icon)
+3. Describe what you want to do in natural language
+4. The agent will execute commands, read output, and continue reasoning until the task is complete
+
+Supported providers:
+- **OpenAI** (GPT-4o, GPT-4, etc.)
+- **Anthropic** (Claude Sonnet, Claude Opus, etc.)
+- **DeepSeek** (deepseek-chat, deepseek-coder, deepseek-reasoner)
+- **Qwen / 通义千问** (qwen-plus, qwen-turbo, qwen-max)
+- **Ollama** (Local models: llama3, etc.)
+- **Custom** (Any OpenAI-compatible endpoint)
 
 ---
 
@@ -81,7 +86,7 @@ MIT — Free to use, free to modify, free forever.
 
 # FastSSH
 
-一款免费的 macOS 原生 SSH 客户端，内置 SFTP 文件管理器。
+一款免费的 macOS 原生 SSH 客户端，内置 SFTP 文件管理器和 AI 智能助手。
 
 ---
 
@@ -96,11 +101,13 @@ MIT — Free to use, free to modify, free forever.
 ## 功能特性
 
 - **真正的 PTY 终端** — 完整交互式 Shell，支持 256 色和真彩色，Tab 补全、快捷键全部正常工作
-- **命令联想** — 输入时智能推荐命令，自动学习历史记录
 - **内置 SFTP 文件管理器** — 双栏文件浏览器，支持拖放、多文件传输、目录上传下载
-- **服务器监控** — 实时显示 CPU、内存、磁盘使用率，支持自动刷新
-- **连接管理** — 保存、分组、导入/导出服务器配置
+- **连接管理** — 保存、分组、快速连接你的服务器
 - **冲突处理** — 文件已存在时智能提示（覆盖、重命名、备份、跳过）
+- **命令自动补全** — 基于历史记录和内置命令的智能提示
+- **服务器监控** — 实时显示 CPU、内存、磁盘使用率
+- **AI 智能助手** — 自主执行命令、读取输出、持续推理直到完成任务。支持 OpenAI、Anthropic、DeepSeek、通义千问、Ollama 以及任何 OpenAI 兼容接口
+- **配置导入导出** — 将所有设置（连接 + AI 配置）导出为单个 JSON 文件
 - **原生 macOS 应用** — 纯 Swift + SwiftUI 开发，轻量快速
 - **12 种语言** — 中文、英文、日文、韩文、西班牙文、法文、德文、葡萄牙文、俄文、阿拉伯文、印地文
 
@@ -127,22 +134,31 @@ brew install libssh2 openssl
 
 # 克隆并编译
 git clone https://github.com/pcb0y/fastSSH.git
-cd fastssh/FastSSH
+cd fastSSH
 swift build -c release
 
 # 启动
-open FastSSH.app
+swift run
 ```
 
-### 自行打包 DMG
+---
 
-```bash
-cd fastssh
-mkdir -p dist/dmg_content
-cp -R FastSSH/FastSSH.app dist/dmg_content/
-ln -sf /Applications dist/dmg_content/Applications
-hdiutil create -volname "FastSSH" -srcfolder dist/dmg_content -ov -format UDZO dist/FastSSH.dmg
-```
+## AI 智能助手
+
+FastSSH 内置 AI 智能助手，可以自主操作你的服务器：
+
+1. 点击标签栏的 **AI 助手** 按钮
+2. 配置 AI 服务商（点击齿轮图标）
+3. 用自然语言描述你想做的事
+4. AI 会自动执行命令、读取输出、持续推理直到任务完成
+
+支持的服务商：
+- **OpenAI**（GPT-4o、GPT-4 等）
+- **Anthropic**（Claude Sonnet、Claude Opus 等）
+- **DeepSeek**（deepseek-chat、deepseek-coder、deepseek-reasoner）
+- **通义千问**（qwen-plus、qwen-turbo、qwen-max）
+- **Ollama**（本地模型：llama3 等）
+- **自定义**（任何 OpenAI 兼容接口）
 
 ---
 
@@ -156,7 +172,7 @@ MIT — 免费使用，免费修改，永远免费。
 
 # FastSSH
 
-macOS用の無料ネイティブSSHクライアント。SFTPファイルマネージャー内蔵。
+macOS用の無料ネイティブSSHクライアント。SFTPファイルマネージャーとAIエージェント内蔵。
 
 ---
 
@@ -171,11 +187,13 @@ macOSで使えるSSHクライアントを探しましたが、まともなもの
 ## 機能
 
 - **本物のPTYターミナル** — 256色・トゥルーカラー対応、Tab補完、ショートカットキー完全対応
-- **コマンド補完** — 入力中にスマートなコマンド候補を表示、履歴学習対応
 - **内蔵SFTPファイルマネージャー** — デュアルパネル、ドラッグ＆ドロップ、複数ファイル・ディレクトリ転送
-- **サーバーモニター** — CPU・メモリ・ディスク使用率をリアルタイム表示
-- **接続管理** — サーバー設定の保存・グループ化・インポート/エクスポート
+- **接続管理** — サーバー設定の保存・グループ化・クイック接続
 - **競合解決** — ファイル重複時の処理選択（上書き・リネーム・バックアップ・スキップ）
+- **コマンド自動補完** — 履歴と組み込みコマンドに基づくインテリジェント候補
+- **サーバーモニター** — CPU、メモリ、ディスク使用率のリアルタイム監視
+- **AIエージェント** — コマンドを自動実行し、出力を読み取り、タスク完了まで推論を続ける自律型AIアシスタント。OpenAI、Anthropic、DeepSeek、Qwen、Ollama、任意のOpenAI互換APIに対応
+- **設定のインポート/エクスポート** — すべての設定（接続＋AI設定）を1つのJSONファイルで管理
 - **ネイティブmacOSアプリ** — Pure Swift + SwiftUI、軽量高速
 - **12言語対応**
 
@@ -195,9 +213,9 @@ macOSで使えるSSHクライアントを探しましたが、まともなもの
 ```bash
 brew install libssh2 openssl
 git clone https://github.com/pcb0y/fastSSH.git
-cd fastssh/FastSSH
+cd fastSSH
 swift build -c release
-open FastSSH.app
+swift run
 ```
 
 ---
@@ -212,7 +230,7 @@ MIT — 無料で使用、無料で改変、永久に無料。
 
 # FastSSH
 
-Un cliente SSH nativo y gratuito para macOS con administrador de archivos SFTP integrado.
+Un cliente SSH nativo y gratuito para macOS con administrador de archivos SFTP y agente de IA integrado.
 
 ---
 
@@ -230,6 +248,10 @@ Así que construí FastSSH: una herramienta SSH completamente nativa, completame
 - **Administrador de archivos SFTP integrado** — Panel dual con arrastrar y soltar, transferencia múltiple
 - **Gestor de conexiones** — Guarda, organiza y conéctate rápidamente a tus servidores
 - **Resolución de conflictos** — Manejo inteligente cuando los archivos ya existen
+- **Autocompletado de comandos** — Sugerencias inteligentes basadas en historial y comandos integrados
+- **Monitor de servidor** — Monitoreo en tiempo real de CPU, memoria y disco
+- **Agente de IA** — Asistente autónomo que ejecuta comandos, lee la salida y razona hasta completar la tarea. Compatible con OpenAI, Anthropic, DeepSeek, Qwen, Ollama y cualquier API compatible con OpenAI
+- **Importación/Exportación** — Exporta e importa toda la configuración (conexiones + IA) en un solo archivo JSON
 - **App nativa de macOS** — Swift + SwiftUI puro, ligera y rápida
 - **12 idiomas**
 
@@ -249,9 +271,9 @@ Así que construí FastSSH: una herramienta SSH completamente nativa, completame
 ```bash
 brew install libssh2 openssl
 git clone https://github.com/pcb0y/fastSSH.git
-cd fastssh/FastSSH
+cd fastSSH
 swift build -c release
-open FastSSH.app
+swift run
 ```
 
 ---
@@ -266,7 +288,7 @@ MIT — Gratis para usar, gratis para modificar, gratis para siempre.
 
 # FastSSH
 
-Un client SSH natif et gratuit pour macOS avec gestionnaire de fichiers SFTP intégré.
+Un client SSH natif et gratuit pour macOS avec gestionnaire de fichiers SFTP et agent IA intégré.
 
 ---
 
@@ -284,6 +306,10 @@ Alors j'ai créé FastSSH : un outil SSH entièrement natif, entièrement gratui
 - **Gestionnaire de fichiers SFTP intégré** — Double panneau avec glisser-déposer et transfert multiple
 - **Gestionnaire de connexions** — Sauvegardez, organisez et connectez-vous rapidement
 - **Résolution de conflits** — Gestion intelligente des fichiers existants
+- **Autocomplétion des commandes** — Suggestions intelligentes basées sur l'historique et les commandes intégrées
+- **Moniteur serveur** — Surveillance en temps réel du CPU, de la mémoire et du disque
+- **Agent IA** — Assistant autonome qui exécute des commandes, lit la sortie et raisonne jusqu'à accomplir la tâche. Compatible avec OpenAI, Anthropic, DeepSeek, Qwen, Ollama et toute API compatible OpenAI
+- **Import/Export** — Exportez et importez toute la configuration (connexions + IA) dans un seul fichier JSON
 - **App macOS native** — Swift + SwiftUI pur, légère et rapide
 - **12 langues**
 
@@ -303,9 +329,9 @@ Alors j'ai créé FastSSH : un outil SSH entièrement natif, entièrement gratui
 ```bash
 brew install libssh2 openssl
 git clone https://github.com/pcb0y/fastSSH.git
-cd fastssh/FastSSH
+cd fastSSH
 swift build -c release
-open FastSSH.app
+swift run
 ```
 
 ---
