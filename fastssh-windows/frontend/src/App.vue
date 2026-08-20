@@ -9,6 +9,8 @@ const sessions = ref([])
 const activeSessionId = ref(null)
 const showConnDialog = ref(false)
 const editingConn = ref(null)
+const connecting = ref(false)
+const connectingName = ref('')
 
 const activeSession = computed(() => sessions.value.find(s => s.id === activeSessionId.value))
 
@@ -17,6 +19,9 @@ async function loadConnections() {
 }
 
 async function connect(conn) {
+  if (connecting.value) return // debounce
+  connecting.value = true
+  connectingName.value = conn.name || conn.host
   try {
     await window.go.main.App.Connect(conn.id)
     sessions.value.push({ id: conn.id, name: conn.name, host: conn.host })
@@ -24,6 +29,8 @@ async function connect(conn) {
   } catch (e) {
     alert('Connection failed: ' + e)
   }
+  connecting.value = false
+  connectingName.value = ''
 }
 
 function disconnect(sessionId) {
@@ -85,6 +92,13 @@ loadConnections()
       @save="saveConn"
       @close="showConnDialog = false"
     />
+    <!-- Connecting overlay -->
+    <div v-if="connecting" class="connecting-overlay">
+      <div class="connecting-box">
+        <div class="spinner"></div>
+        <span>Connecting to {{ connectingName }}...</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -125,5 +139,39 @@ loadConnections()
   color: var(--bg-primary);
   font-weight: 600;
   padding: 8px 16px;
+}
+
+.connecting-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+}
+
+.connecting-box {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px 32px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 14px;
+}
+
+.spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }
 </style>
