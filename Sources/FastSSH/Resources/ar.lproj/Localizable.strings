@@ -79,3 +79,20 @@
 "import.result" = "تم استيراد %d من %d اتصال(ات)";
 
 "tab.monitor" = "مراقب";
+
+/* AI Assistant */
+"ai.placeholder" = "صف ما تريد القيام به...";
+"ai.thinking" = "جارٍ التفكير...";
+"ai.run" = "تنفيذ";
+"ai.copy" = "نسخ";
+"ai.settings" = "إعدادات الذكاء الاصطناعي";
+"ai.provider" = "المزود";
+"ai.endpoint" = "نقطة النهاية";
+"ai.model" = "النموذج";
+
+"ai.agent" = "مساعد الذكاء";
+"ai.stop" = "إيقاف";
+"ai.result" = "النتيجة";
+"ai.error.api" = "خطأ API: %@";
+"ai.error.parse" = "فشل في تحليل استجابة الذكاء الاصطناعي";
+"ai.error.notconfigured" = "لم يتم تهيئة الذكاء الاصطناعي. يرجى الإعداد في الإعدادات.";

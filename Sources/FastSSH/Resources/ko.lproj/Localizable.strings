@@ -79,3 +79,20 @@
 "import.result" = "%2$d개 중 %1$d개 연결 가져옴";
 
 "tab.monitor" = "모니터";
+
+/* AI Assistant */
+"ai.placeholder" = "수행할 작업을 설명하세요...";
+"ai.thinking" = "생각 중...";
+"ai.run" = "실행";
+"ai.copy" = "복사";
+"ai.settings" = "AI 설정";
+"ai.provider" = "제공자";
+"ai.endpoint" = "API 엔드포인트";
+"ai.model" = "모델";
+
+"ai.agent" = "AI 어시스턴트";
+"ai.stop" = "중지";
+"ai.result" = "결과";
+"ai.error.api" = "API 오류: %@";
+"ai.error.parse" = "AI 응답 분석 실패";
+"ai.error.notconfigured" = "AI가 설정되지 않았습니다. 설정에서 구성해주세요.";

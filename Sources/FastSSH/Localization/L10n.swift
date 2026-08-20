@@ -48,12 +48,16 @@ class LanguageManager: ObservableObject {
             return
         }
 
-        if let path = baseBundle.path(forResource: currentLanguage, ofType: "lproj"),
-           let langBundle = Bundle(path: path) {
-            LocalizationBridge.current = langBundle
-        } else {
-            LocalizationBridge.current = baseBundle
+        // SPM lowercases lproj directory names, so try both original and lowercased
+        let candidates = [currentLanguage, currentLanguage.lowercased()]
+        for candidate in candidates {
+            if let path = baseBundle.path(forResource: candidate, ofType: "lproj"),
+               let langBundle = Bundle(path: path) {
+                LocalizationBridge.current = langBundle
+                return
+            }
         }
+        LocalizationBridge.current = baseBundle
     }
 }
 

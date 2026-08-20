@@ -79,3 +79,20 @@
 "import.result" = "%d de %d conexão(ões) importada(s)";
 
 "tab.monitor" = "Monitor";
+
+/* AI Assistant */
+"ai.placeholder" = "Descreva o que deseja fazer...";
+"ai.thinking" = "Pensando...";
+"ai.run" = "Executar";
+"ai.copy" = "Copiar";
+"ai.settings" = "Configurações de IA";
+"ai.provider" = "Provedor";
+"ai.endpoint" = "Endpoint API";
+"ai.model" = "Modelo";
+
+"ai.agent" = "Agente IA";
+"ai.stop" = "Parar";
+"ai.result" = "Resultado";
+"ai.error.api" = "Erro de API: %@";
+"ai.error.parse" = "Falha ao analisar resposta da IA";
+"ai.error.notconfigured" = "IA não configurada. Configure nas definições.";

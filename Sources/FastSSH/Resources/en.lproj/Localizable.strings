@@ -79,3 +79,22 @@
 "import.result" = "Imported %d of %d connection(s)";
 
 "tab.monitor" = "Monitor";
+
+/* AI Assistant */
+"ai.placeholder" = "Describe what you want to do...";
+"ai.thinking" = "Thinking...";
+"ai.run" = "Run";
+"ai.copy" = "Copy";
+"ai.settings" = "AI Settings";
+"ai.provider" = "Provider";
+"ai.endpoint" = "API Endpoint";
+"ai.model" = "Model";
+"ai.agent" = "AI Agent";
+"ai.stop" = "Stop Agent";
+"ai.result" = "Result";
+"ai.fetch.models" = "Fetch model list";
+"ai.custom.model" = "custom";
+"ai.custom.model.input" = "Or enter model name manually";
+"ai.error.api" = "API Error: %@";
+"ai.error.parse" = "Failed to parse AI response";
+"ai.error.notconfigured" = "AI not configured. Please set up in settings.";

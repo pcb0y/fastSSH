@@ -79,3 +79,20 @@
 "import.result" = "%2$d में से %1$d कनेक्शन आयात किए";
 
 "tab.monitor" = "मॉनिटर";
+
+/* AI Assistant */
+"ai.placeholder" = "बताएं कि आप क्या करना चाहते हैं...";
+"ai.thinking" = "सोच रहा है...";
+"ai.run" = "चलाएं";
+"ai.copy" = "कॉपी";
+"ai.settings" = "AI सेटिंग्स";
+"ai.provider" = "प्रदाता";
+"ai.endpoint" = "API एंडपॉइंट";
+"ai.model" = "मॉडल";
+
+"ai.agent" = "AI सहायक";
+"ai.stop" = "रोकें";
+"ai.result" = "परिणाम";
+"ai.error.api" = "API त्रुटि: %@";
+"ai.error.parse" = "AI प्रतिक्रिया को पार्स करने में विफल";
+"ai.error.notconfigured" = "AI कॉन्फ़िगर नहीं है। कृपया सेटिंग्स में सेटअप करें।";
